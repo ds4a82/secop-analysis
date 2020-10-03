@@ -52,7 +52,7 @@ summary_table <- function(d, category_, categoricals, numerical, order_by_ = "N"
   # No hay manera que numerical sera nulo porque se usa para agrupar el categoricals
   d$category_ <- d[[category_]]
   
-  # Top Categorical Variables  
+  # Top Categorical Variablse
   t1 <- d[!is.na(category_), .N, keyby = category_]
   
   for(category in categoricals){ # category = "Departamento"
@@ -71,3 +71,6 @@ summary_table <- function(d, category_, categoricals, numerical, order_by_ = "N"
   setkeyv(x = t1, cols = category_)
   t1
 }
+
+
+# Hice esta modicicacón
