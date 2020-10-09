@@ -1,12 +1,4 @@
-# !pip install pandas
-# !pip install sodapy
-# pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
-
 import sys
-!jupyter nbextension enable --py widgetsnbextension
-!pip uninstall pandas_profiling
-!pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
-
 import pandas as pd
 import numpy as np
 from sodapy import Socrata
