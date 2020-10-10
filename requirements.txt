@@ -1,0 +1,8 @@
+sodapy
+pandas-profiling[notebook]
+https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
+numpy
+pandas
+plotly
+pathlib
+ipywidgets
