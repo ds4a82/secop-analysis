@@ -13,4 +13,4 @@ con <- dbConnect(drv, dbname = "db_secop",
 # query the data from postgreSQL 
 query <- "SELECT * FROM secop LIMIT 10"
 
-df_secop <- dbGetQuery(con, query)
+Sdf_secop <- dbGetQuery(con, query)
