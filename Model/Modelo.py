@@ -20,23 +20,12 @@ import plotly.graph_objs as go
 from plotly.offline import *
 
 
-# In[2]:
-
-
 db_string= 'postgresql://postgres:ds4a#202082@ds4a-instance.c0wb6thhjklc.us-east-1.rds.amazonaws.com/db_secop'
 connection_info = create_engine(db_string).connect()
 
-
-# In[3]:
-
-
 query_SECOPI='''SELECT * FROM secop WHERE fuente LIKE '%SECOP_I%' AND fecha_de_firma LIKE '%20%' ORDER BY fecha_de_firma DESC LIMIT 1000000 '''
 
-
-# In[4]:
-
-
-df_raw_secopi=pd.read_sql(query_SECOPI,con=connection_info)
+df_raw_secopi = pd.read_sql(query_SECOPI,con=connection_info)
 get_ipython().run_line_magic('time', '')
 
 
