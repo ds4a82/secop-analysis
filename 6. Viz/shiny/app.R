@@ -1,3 +1,16 @@
+# install.packages(c(
+#     "data.table"
+#     , "shiny"
+#     , "shinyjs"
+#     , "shinydashboard"
+#     , "plotly"
+#     , "digest"
+#     , "DT"
+#     , "readxl"
+# ))
+
+
+
 # ---- Global Code Execution ----
 require(data.table)
 require(shinydashboard)
