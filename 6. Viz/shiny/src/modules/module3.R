@@ -9,7 +9,7 @@ module3UI <- function(id){
       h1("Word analysis")
      , fluidRow(
        column(
-         img(src = "https://raw.githubusercontent.com/ds4a82/secop-analysis/master/Secop%202/SecopII%20(1).png", style="width:400px;height:400px;")
+         img(src = "https://github.com/ds4a82/secop-analysis/raw/master/1.%20EDA/Secop1/SecopI.png", style="width:400px;height:400px;")
          , width = 6
        )
        , column(
@@ -24,7 +24,7 @@ module3UI <- function(id){
       h1("Clustering")
      , fluidRow(
        column(
-         img(src = "https://raw.githubusercontent.com/ds4a82/secop-analysis/master/Secop%202/kmeandummy.png", style="width:400px;height:400px;")
+         img(src = "https://github.com/ds4a82/secop-analysis/raw/master/1.%20EDA/Secop%202/kmeandummy.png", style="width:400px;height:400px;")
          , width = 6
        )
        , column(

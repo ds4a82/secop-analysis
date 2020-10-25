@@ -7,7 +7,7 @@ module2UI <- function(id){
   # it's good practice.
   
   main <- list(""
-      , HTML('<iframe width="100%" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiZGZkZDdlNmMtMzRhYy00ZjI4LTljMTEtYTg4Nzc4YjI4YjEzIiwidCI6IjU3N2ZjMWQ4LTA5MjItNDU4ZS04N2JmLWVjNGY0NTVlYjYwMCIsImMiOjR9" frameborder="0"></iframe>')
+      , HTML('<iframe width="100%" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiZTAzYjY3OTUtNzc4Ni00MDcwLWIxNGYtOTM0OWI1YzMzNWIwIiwidCI6IjU3N2ZjMWQ4LTA5MjItNDU4ZS04N2JmLWVjNGY0NTVlYjYwMCIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>')
   )
   tagList(main)
   # mainPanel(width = 12, main)
