@@ -47,7 +47,7 @@ module4UI <- function(id){
        ""
        , column(width = 4)
        , column(wellPanel(
-        h2("Ing. Yasmin Moya Villa, MsC")
+        h2("Yasmin Moya Villa, MSc")
         , p("Associate Professor at the University of Cartagena")
         , a(icon(name = "envelope"), href = "ymoyav@unicartagena.edu.co")
         , a(icon(name = "linkedin"), href = "www.linkedin.com/in/yasmin-moya-villa")
