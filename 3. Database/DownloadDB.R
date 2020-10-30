@@ -33,7 +33,7 @@ departamentos <- getDt("SELECT departamento AS Nombre, COUNT(*) AS Contratos FRO
 states_ <- departamentos$nombre
 
 for(state_ in states_){ # state_ <- states_[5]
-  print(sprintf("Storing %s", state_))
+  print(sprintf("Downloading %s", state_))
   d <- getDt(sprintf("SELECT * FROM secop WHERE departamento = '%s'", state_))
   d <- changeColsEncoding(d)
   Encoding(state_) <- "UTF-8"
