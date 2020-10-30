@@ -63,7 +63,7 @@ menu <- list(
 
 parameters <- list(
     ""
-    , data_filename = "data/data.RDS"
+    , data_filename = "data/secop.RDS"
     , cats_ = c("Modalidad de Contratación", "Tipo de Contrato", "Departamento")
     , nums_ = c("Valor del Contrato", "Valor Facturado", "Días Adicionados")
     , date_ = "Fecha de Firma"

@@ -19,6 +19,23 @@ module3UI <- function(id){
        )
        )
     )
+    
+    , br()
+    , wellPanel(
+      h1("n-grams analysis")
+      , fluidRow(
+        column(
+          img(src = "https://github.com/ds4a82/secop-analysis/raw/master/1.%20EDA/Secop%202/Grafico%20de%20Frecuencia%20de%202-gram.png", style="width:400px;height:400px;")
+          , width = 6
+        )
+        , column(
+          h3("2-grams analysis")
+          , p("Top 20 bigrams from the contractual object of SECOP I shows that the bigrams 'prestaci - servicios',  'prestar - servicios', 'prestacion - servicios', 'prestaci - servicio' and  'prestar - servicio' are the most frequent. This may represent that most contracts are related to the provision of services.")
+          , width = 6
+        )
+      )
+    )
+    
     , br()
     , wellPanel(
       h1("Clustering")
