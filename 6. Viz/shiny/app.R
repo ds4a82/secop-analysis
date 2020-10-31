@@ -64,9 +64,9 @@ menu <- list(
 parameters <- list(
     ""
     , data_filename = "data/secop.RDS"
-    , cats_ = c("Modalidad de Contratación", "Tipo de Contrato", "Departamento")
-    , nums_ = c("Valor del Contrato", "Valor Facturado", "Días Adicionados")
-    , date_ = "Fecha de Firma"
+    , cats_ = c("departamento", "tipo_de_contrato", "estado_contrato")
+    , nums_ = c("valor_del_contrato")
+    , date_ = "fecha_de_firma" # Must be single.
     , dash_color = "purple"
     , title = "Dashboard"
     , credential = data.table(
