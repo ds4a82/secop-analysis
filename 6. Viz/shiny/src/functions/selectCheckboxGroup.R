@@ -38,7 +38,7 @@ selectCheckboxGroupInput <- function(id, choices, selected = choices, label = "S
         # , width = "120px"
         , actionButton(
             inputId = ns("all")
-            , label = "(De)Seleccionar todos"
+            , label = "(Un)Select all"
         )
         , br()
         , actionButton(

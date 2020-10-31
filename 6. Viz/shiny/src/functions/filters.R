@@ -1,77 +1,50 @@
-crm_filtrosUI <- function(id, estados = c("Close")){
+crm_filtrosUI <- function(id){
   ns <- NS(id)
   
   # ------ Sales Input ------ 
-  seller <- selectCheckboxGroupInput(
-    id = ns("sellers")
-    , label = "Choose provider"
-    , choices = {
-      # query <- paste0("SELECT
-      #     DISTINCT(Vendedores) as V
-      #     FROM (", parameters$crm_query_op, ") as o
-      # ")
-      # pool::dbGetQuery(ikonocrm, query)$V
-      paste0("Provider ", 1:10)
-    }
+  cat1_input <- selectCheckboxGroupInput(
+    id = ns("cat1_filter")
+    , label = sprintf("Choose %s", cats_[1])
+    , choices = unique(d$cat1_)
+    , selected = unique(d$cat1_)
     , status = "danger"
   )
-  type <- selectCheckboxGroupInput(
-    id = ns("type")
-    , label = "Choose state"
-    , choices = {
-      # query <- paste0("SELECT
-      #     DISTINCT(Tipo_Oportunidad) as Tipo
-      #     FROM (", parameters$crm_query_op, ") as o
-      # ")
-      # pool::dbGetQuery(ikonocrm, query)$Tipo
-      paste0("State ", 1:15)
-    }
+  
+  cat2_input <- selectCheckboxGroupInput(
+    id = ns("cat2_filter")
+    , label = sprintf("Choose %s", cats_[2])
+    , choices = unique(d$cat2_)
+    , selected = unique(d$cat2_)
     , status = "warning"
   )
-  scenario <- selectCheckboxGroupInput(
-    id = ns("scenario")
-    , label = "Choose type"
-    , choices = {
-      # query <- paste0("SELECT
-      #     DISTINCT(Estado) as Estado
-      #     FROM (", parameters$crm_query_op, ") as o
-      #     ORDER BY CASE
-      #     WHEN Estado = 'Close' then 1 
-      #     WHEN Estado = 'Won' then 2
-      #     WHEN Estado = 'Forecast' then 3
-      #     WHEN Estado = 'Upside' then 4
-      #     WHEN Estado = 'Pipeline' then 5
-      #     WHEN Estado = 'Prospect' then 6
-      #     else 7
-      #     end
-      # ")
-      # pool::dbGetQuery(ikonocrm, query)$Estado
-      paste0("Type ", 1:3)
-      
-    }
-    , selected = estados
+  
+  cat3_input <- selectCheckboxGroupInput(
+    id = ns("cat3_filter")
+    , label = sprintf("Choose %s", cats_[3])
+    , choices = unique(d$cat3_)
+    , selected = unique(d$cat3_)
     , status = "primary"
   )
-  dates <- dateRangeInput(
+  
+  date_input <- dateRangeInput(
     inputId = ns("dates")
     , label = "Contract sign date:"
-    , start = "2019-01-01" # First of this month
-    , end = "2019-12-31"
-    # , start = floor_date(Sys.time(), 'year') # First of this month
-    # , end = floor_date(Sys.time(), 'year') + years(1) - days(1)
+    , start = min(d$date_, na.rm = T)
+    , end = max(d$date_, na.rm = T)
     , sep = " - "
   )
+  
   tagList(list(""
                , column(width = 4
                         , sidebarPanel(width = 12
                                        , h4("Filters")
-                                       , seller
+                                       , cat1_input
                                        , br()
-                                       , type
+                                       , cat2_input
                                        , br()
-                                       , scenario
+                                       , cat3_input
                                        , br()
-                                       , dates
+                                       , date_input
                         )
                )
   ))
@@ -79,41 +52,14 @@ crm_filtrosUI <- function(id, estados = c("Close")){
 
 crm_filtros <- function(input, output, session){
   # ns <- session$ns
-  sellers <- callModule(selectCheckboxGroup, "sellers"
-                        , {
-                          # query <- paste0("SELECT
-                          #                 DISTINCT(Vendedores) as V
-                          #                 FROM (", parameters$crm_query_op, ") as o
-                          #                 ")
-                          # pool::dbGetQuery(ikonocrm, query)$V
-                          paste("Provider", 1:10)
-                        }
-  )
-  scenario <- callModule(selectCheckboxGroup, "scenario", {
-    # query <- paste0("SELECT
-    #         DISTINCT(Estado) as Estado
-    #         FROM (", parameters$crm_query_op, ") as o
-    #         ORDER BY CASE
-    #         WHEN Estado = 'Close' then 1 
-    #         WHEN Estado = 'Won' then 2
-    #         WHEN Estado = 'Forecast' then 3
-    #         WHEN Estado = 'Upside' then 4
-    #         WHEN Estado = 'Pipeline' then 5
-    #         WHEN Estado = 'Prospect' then 6
-    #         else 7
-    #         end
-    #     ")
-    # pool::dbGetQuery(ikonocrm, query)$Estado
-    paste("State ", 1:15)
-    
+  cat1_module <- callModule(selectCheckboxGroup, "cat1_filter", {
+    unique(d$cat1_)
   })
-  type <- callModule(selectCheckboxGroup, "type", {
-    # query <- paste0("SELECT
-    #                 DISTINCT(Tipo_Oportunidad) as Tipo
-    #                 FROM (", parameters$crm_query_op, ") as o
-    #                 ")
-    # pool::dbGetQuery(ikonocrm, query)$Tipo
-    paste("Type ", 1:3)
+  cat2_module <- callModule(selectCheckboxGroup, "cat2_filter", {
+    unique(d$cat2_)
+  })
+  cat3_module <- callModule(selectCheckboxGroup, "cat3_filter", {
+    unique(d$cat3_)
   })
   
   #   return(reactive({
@@ -124,4 +70,14 @@ crm_filtros <- function(input, output, session){
   #           , " AND Estado IN (", paste0("'", paste(scenario(), collapse = "','"), "'"), ")"
   #       )
   # }))
+  return(reactive({
+    # Retorna un booleano reactivo
+    d[,
+      date_ >= input$dates[1] &
+      date_ <= input$dates[2] &
+      cat1_ %in% cat1_module() &
+      cat2_ %in% cat2_module() &
+      cat3_ %in% cat3_module()
+      ]
+  }))
 }

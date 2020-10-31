@@ -64,10 +64,17 @@ menu <- list(
 parameters <- list(
     ""
     , data_filename = "data/secop.RDS"
+<<<<<<< HEAD
     , cats_ = c("Modalidad de Contratación", "Tipo de Contrato", "Departamento")
     , nums_ = c("Valor del Contrato", "Valor Facturado", "Días Adicionados")
     , date_ = "Fecha de Firma"
     , dash_color = "blue"
+=======
+    , cats_ = c("departamento", "tipo_de_contrato", "estado_contrato")
+    , nums_ = c("valor_del_contrato")
+    , date_ = "fecha_de_firma" # Must be single.
+    , dash_color = "purple"
+>>>>>>> f1ab50b7e6dcbff2347e2fcce2f30eb9ac459059
     , title = "Dashboard"
     , credential = data.table(
         Un = c("usuario")
