@@ -67,7 +67,7 @@ parameters <- list(
     , cats_ = c("Modalidad de Contratación", "Tipo de Contrato", "Departamento")
     , nums_ = c("Valor del Contrato", "Valor Facturado", "Días Adicionados")
     , date_ = "Fecha de Firma"
-    , dash_color = "purple"
+    , dash_color = "blue"
     , title = "Dashboard"
     , credential = data.table(
         Un = c("usuario")
