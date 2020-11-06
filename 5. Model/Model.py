@@ -23,26 +23,25 @@ import pyLDAvis.gensim
 
 
 
-df=pd.read_csv(r"C:\Users\User\Downloads\SECOPI.csv")
+df=pd.read_csv(r"5. Model/SECOPI.csv")
 df=df.dropna()
 
 
+global stopwords
+
 def GetVZandTFIDF(data):
-    global stopwords
-    stopwords = [word.encode('utf-8') for word in stopwords.words('spanish')]
+    stopwords_ = [word.encode('utf-8') for word in stopwords.words('spanish')]
     vectorizer = TfidfVectorizer(
         min_df=5
         , analyzer='word'
         , ngram_range=(1, 2)
-        , stop_words=stopwords)
+        , stop_words=stopwords_)
     vz = vectorizer.fit_transform(list(data["descripcion_del_proceso"]))
     vz.shape
     tfidf = dict(zip(vectorizer.get_feature_names(), vectorizer.idf_))
     tfidf = pd.DataFrame(columns=['tfidf']).from_dict(dict(tfidf), orient='index')
     tfidf.columns = ['tfidf']
     return vz, tfidf, vectorizer
-vz, tfidf, vectorizer = GetVZandTFIDF(df)
-
 
 def GetClustersPerformance(vz, filename = "KMeansGroupTest.png", k_max = 80):
     vz.shape
@@ -133,22 +132,13 @@ def exportKmeansDF(kmeans_df, filename = 'KMeansGraph.html', char_lenght = 200, 
     f = open(filename, 'w')
     f.write(html)
     f.close()
-    # ---- K-Means ----
-#dist,sil_scores=GetClustersPerformance(vz, filename = "KMeansGroupTest.png", k_max =100) # K=29
-#num_clusters = 44
-#kmeans = GetKmeans(vz, num_clusters)
-#keywords_df = GetKeywordsKmeans(kmeans, vectorizer)
-#print(keywords_df)
-#keywords_df.to_csv('Key Topics.csv')
-#kmeans_df = GetKmeansDF(kmeans, df[:35000], vz[:35000],n_components = 2, n_iter = 500)
-#kmeans_df.to_csv('KKmeans.csv')
-#exportKmeansDF(kmeans_df, filename = 'KMeansGraph.html')
 
 
 
 def sent_to_words(sentences):
     for sentence in sentences:
         yield(gensim.utils.simple_preprocess(str(sentence), deacc=True))  # deacc=True removes punctuations
+
 def setCorpusAux(data):
     data_words = list(sent_to_words(data["descripcion_del_proceso"]))
     data['tokens_bigram']=data_words
@@ -185,7 +175,6 @@ def plot_coherences(x, y, filename):
     plt.savefig(filename)
     plt.close()
 
-
 def exploreLDAmodels(data, corpus, id2word, topic_range=range(5, 110, 10), filename = "LDA_Topics.png"):
     coherences = []
     X=[]
@@ -217,6 +206,7 @@ def LDA_model(corpus, id2word, num_topics, passes=1, chunksize = 500):
                                            , per_word_topics=True
                                            , alpha='auto'
                                            )
+
 def display_topics(model):
     topics = model.show_topics(num_topics=model.num_topics, formatted=False, num_words=10)
     topics = map(lambda c: map(lambda cc: cc[0], c[1]), topics)
@@ -236,18 +226,33 @@ def get_document_topic_matrix(corpus, model):
         matrix.append(output)
     matrix = np.array(matrix)
     return matrix
-def exportLDA_vis(best_model, corpus, id2word, filename = 'pyLDAvis.html'):
 
+def exportLDA_vis(best_model, corpus, id2word, filename = 'pyLDAvis.html'):
     panel = pyLDAvis.gensim.prepare(best_model, corpus, id2word, mds='mmds')
     pyLDAvis.save_html(panel, filename)
 
     # ---- LDA ----
 
-corpus,id2word = setCorpusAux(df[:1000])
-#coherences, models,X,Y = exploreLDAmodels(df,corpus,id2word, filename = "LDA_Topics.png") # When the number is uncertain
-optimal_num_topics = 30 # This should be and input of previus explore_models function
+d_ = df.copy()[:100]
+vz, tfidf, vectorizer = GetVZandTFIDF(d_)
+corpus,id2word = setCorpusAux(d_)
+# coherences, models,X,Y = exploreLDAmodels(d_,corpus,id2word, filename = "5. Model/LDA_Topics.png") # When the number is uncertain
+
+# ---- K-Means ----
+dist,sil_scores=GetClustersPerformance(vz, filename = "5. Model/KMeansGroupTest.png", k_max = 30) # K=29
+num_clusters = 44
+kmeans = GetKmeans(vz, num_clusters)
+keywords_df = GetKeywordsKmeans(kmeans, vectorizer)
+print(keywords_df)
+keywords_df.to_csv('5. Model/Key Topics.csv')
+kmeans_df = GetKmeansDF(kmeans, d_, vz,n_components = 2, n_iter = 500)
+kmeans_df.to_csv('5. Model/KKmeans.csv')
+exportKmeansDF(kmeans_df, filename = '5. Model/KMeansGraph.html')
+
+
+optimal_num_topics = 15 # This should be and input of previus explore_models function
 best_model = LDA_model(corpus,id2word,num_topics=optimal_num_topics, passes=5)
 Key_model=display_topics(model = best_model)
-Key_model.to_csv('Key_Model.csv')
+Key_model.to_csv('5. Model/Key_Model.csv')
 matrix = get_document_topic_matrix(corpus,best_model)
-exportLDA_vis(best_model,corpus,id2word)
+exportLDA_vis(best_model,corpus,id2word, filename = "5. Model/pyLDAvis.html")
