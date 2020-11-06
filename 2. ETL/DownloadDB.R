@@ -67,15 +67,26 @@ cleanDt <- function(d){
   d[, fecha_de_fin_de_ejecucion := as.Date(x = fecha_de_fin_de_ejecucion, format = "%m/%d/%Y")]
   d  
 }
-rand <- 1000
-d <- getDt(sprintf("SELECT * FROM secop OFFSET floor(random()*%s) WHERE fecha_de_firma <> 'NA' AND fecha_de_firma::date >= '2015-01-01' LIMIT %s;", rand, rand))
-d <- cleanDt(d)
-d[, .(
+rand <- 50000
+d_secop_I <- getDt(sprintf("SELECT * FROM secop WHERE fecha_de_firma <> 'NA' AND fecha_de_firma::date >= '2015-01-01' AND fuente = 'SECOP_I' LIMIT %s;", rand, rand))
+d_secop_I <- cleanDt(d_secop_I)
+d_secop_I[, .(
   .N
   , min(fecha_de_firma, na.rm = T)
   , max(fecha_de_firma, na.rm = T)
   , paste0(sum(round(valor_del_contrato/1000000, 0), na.rm = T), " M")
   ), departamento][order(N, decreasing = T)]
+
+d_secop_II <- getDt(sprintf("SELECT * FROM secop WHERE fecha_de_firma <> 'NA' AND fecha_de_firma::date >= '2015-01-01' AND fuente = 'SECOP_II' LIMIT %s;", rand, rand))
+d_secop_II <- cleanDt(d_secop_II)
+d_secop_II[, .(
+  .N
+  , min(fecha_de_firma, na.rm = T)
+  , max(fecha_de_firma, na.rm = T)
+  , paste0(sum(round(valor_del_contrato/1000000, 0), na.rm = T), " M")
+), departamento][order(N, decreasing = T)]
+
+d <- rbind(d_secop_I, d_secop_II)
 
 saveRDS(object = d, file = sprintf("6. Viz/shiny/data/secop.RDS"))
 write.table(x = d, file = sprintf("6. Viz/shiny/data/secop.csv"), sep = ",", na = "", row.names = F, fileEncoding = "latin1")
