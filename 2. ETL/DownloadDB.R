@@ -41,8 +41,8 @@ downloadDepartament <- function(folder_ = "2. ETL/departments/"){
     print(sprintf("Storing %s", state_))
     saveRDS(object = d, file = paste0(folder_, state_, ".RDS"))
   }
-  
 }
+
 groupDepartaments <- function(folder_destiny = "6. Viz/shiny/data/"){
   # Bind one single database
   d <- data.table()
@@ -50,7 +50,7 @@ groupDepartaments <- function(folder_destiny = "6. Viz/shiny/data/"){
     c(folder_)
     , pattern = "\\.(rds|RDS)$"
     , recursive = TRUE
-    , full.names = TRUE)){
+    , full.names = TRUE)) {
     d <- rbindlist(l = list(d, readRDS(rds)), use.names = T, fill = T)
   }
   saveRDS(object = d, file = sprintf("%s%s", folder_destiny, "secop.RDS"))
@@ -67,8 +67,8 @@ cleanDt <- function(d){
   d[, fecha_de_fin_de_ejecucion := as.Date(x = fecha_de_fin_de_ejecucion, format = "%m/%d/%Y")]
   d  
 }
-rand <- 10000
-d <- getDt(sprintf("SELECT * FROM secop OFFSET floor(random()*%s) LIMIT %s;", rand, rand))
+rand <- 1000
+d <- getDt(sprintf("SELECT * FROM secop OFFSET floor(random()*%s) WHERE fecha_de_firma <> 'NA' AND fecha_de_firma::date >= '2015-01-01' LIMIT %s;", rand, rand))
 d <- cleanDt(d)
 d[, .(
   .N
@@ -76,4 +76,6 @@ d[, .(
   , max(fecha_de_firma, na.rm = T)
   , paste0(sum(round(valor_del_contrato/1000000, 0), na.rm = T), " M")
   ), departamento][order(N, decreasing = T)]
+
 saveRDS(object = d, file = sprintf("6. Viz/shiny/data/secop.RDS"))
+write.table(x = d, file = sprintf("6. Viz/shiny/data/secop.csv"), sep = ",", na = "", row.names = F, fileEncoding = "latin1")

@@ -77,7 +77,6 @@ def GetKmeans(vz, num_clusters):
     kmeans_model = MiniBatchKMeans(n_clusters=num_clusters, init='k-means++', n_init=1, random_state=42,
                                    init_size=1000, batch_size=35000, verbose=False, max_iter=1000, )
     kmeans = kmeans_model.fit(vz)
-
     kmeans_clusters = kmeans.predict(vz)
     kmeans_distances = kmeans.transform(vz)
     return kmeans
@@ -116,18 +115,22 @@ def exportKmeansDF(kmeans_df, filename = 'KMeansGraph.html', char_lenght = 200, 
     from bokeh.models import HoverTool, BoxSelectTool
     from bokeh.embed import file_html
     from bokeh.resources import CDN
-    plot_kmeans = bp.figure(plot_width=plot_width, plot_height=plot_height, title=title,
-                            x_axis_type=None, y_axis_type=None, min_border=1)
-
-    palette = d3['Category20'][20] + d3['Category20b'][20]
-    color_map = bmo.CategoricalColorMapper(factors=kmeans_df['cluster'].unique(), palette=palette)
-
+    plot_kmeans = bp.figure(
+        plot_width=plot_width
+        , plot_height=plot_height
+        , title=title
+        , tools= "pan,wheel_zoom,box_zoom,reset,hover"
+        , x_axis_type=None, y_axis_type=None, min_border=1)
+    palette = d3['Category20'][12] + d3['Category20b'][12]
+    color_map = bmo.CategoricalColorMapper(
+        factors=kmeans_df['cluster'].unique()
+        , palette=palette
+        )
     plot_kmeans.scatter('x', 'y', source=kmeans_df,
                         color={'field': 'cluster', 'transform': color_map},
                         legend='cluster')
     hover = plot_kmeans.select(dict(type=HoverTool))
-    hover.tooltips={"detalle del objeto a contratar": "@descripcion_del_proceso", "cluster": "@cluster"}
-
+    hover.tooltips={"description": "@descripcion_del_proceso", "cluster": "@cluster"}
     html = file_html(plot_kmeans, CDN, "Plot")
     f = open(filename, 'w')
     f.write(html)
@@ -240,7 +243,7 @@ corpus,id2word = setCorpusAux(d_)
 
 # ---- K-Means ----
 dist,sil_scores=GetClustersPerformance(vz, filename = "5. Model/KMeansGroupTest.png", k_max = 30) # K=29
-num_clusters = 44
+num_clusters = 24
 kmeans = GetKmeans(vz, num_clusters)
 keywords_df = GetKeywordsKmeans(kmeans, vectorizer)
 print(keywords_df)
