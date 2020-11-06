@@ -6,22 +6,6 @@ module3UI <- function(id){
   
   main <- list(""
     , wellPanel(
-      h1("Word analysis")
-     , fluidRow(
-       column(
-         img(src = "https://github.com/ds4a82/secop-analysis/raw/master/1.%20EDA/Secop1/SecopI.png", style="width:400px;height:400px;")
-         , width = 6
-       )
-       , column(
-         h3("What is Lorem Ipsum?")
-         , p("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
-         , width = 6
-       )
-       )
-    )
-    
-    , br()
-    , wellPanel(
       h1("n-grams analysis")
       , fluidRow(
         column(
