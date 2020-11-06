@@ -59,7 +59,6 @@ groupDepartaments <- function(folder_destiny = "6. Viz/shiny/data/"){
 }
 
 # ---- Download a sample of the database ----
-
 cleanDt <- function(d){
   d <- changeColsEncoding(d)
   d[, fecha_de_firma := as.Date(x = fecha_de_firma, format = "%m/%d/%Y")]
@@ -67,6 +66,8 @@ cleanDt <- function(d){
   d[, fecha_de_fin_de_ejecucion := as.Date(x = fecha_de_fin_de_ejecucion, format = "%m/%d/%Y")]
   d  
 }
+
+
 rand <- 1000
 d <- getDt(sprintf("SELECT * FROM secop OFFSET floor(random()*%s) WHERE fecha_de_firma <> 'NA' AND fecha_de_firma::date >= '2015-01-01' LIMIT %s;", rand, rand))
 d <- cleanDt(d)
