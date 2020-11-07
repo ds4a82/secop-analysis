@@ -64,12 +64,13 @@ cleanDt <- function(d){
   d[, fecha_de_firma := as.Date(x = fecha_de_firma, format = "%m/%d/%Y")]
   d[, fecha_de_inicio_de_ejecucion := as.Date(x = fecha_de_inicio_de_ejecucion, format = "%m/%d/%Y")]
   d[, fecha_de_fin_de_ejecucion := as.Date(x = fecha_de_fin_de_ejecucion, format = "%m/%d/%Y")]
+  d <- d[!is.na(fecha_de_firma) & fecha_de_firma > "2015-01-01"]
   d  
 }
 
 
-rand <- 1000
-d <- getDt(sprintf("SELECT * FROM secop OFFSET floor(random()*%s) WHERE fecha_de_firma <> 'NA' AND fecha_de_firma::date >= '2015-01-01' LIMIT %s;", rand, rand))
+rand <- 100000
+d <- getDt(sprintf("SELECT * FROM secop OFFSET floor(random()*%s) LIMIT %s;", rand, rand))
 d <- cleanDt(d)
 d[, .(
   .N
