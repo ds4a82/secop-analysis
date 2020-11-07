@@ -23,7 +23,7 @@ import pyLDAvis.gensim
 
 
 
-df=pd.read_csv(r"5. Model/SECOPI.csv")
+df = pd.read_csv(r"6. Viz/shiny/data/secop.csv", encoding='ISO-8859-1')
 df=df.dropna()
 
 
@@ -107,34 +107,6 @@ def GetKmeansDF(kmeans, data, vz, n_components = 2, n_iter = 500):
     kmeans_df['id']=data['id']
     kmeans_df.to_csv('Kmeans.csv', index=False, encoding='utf-8')
     return kmeans_df
-
-def exportKmeansDF(kmeans_df, filename = 'KMeansGraph.html', char_lenght = 200, title="KMeans clustering", plot_width=890, plot_height=600):
-    import bokeh.plotting as bp
-    from bokeh.palettes import d3
-    import bokeh.models as bmo
-    from bokeh.models import HoverTool, BoxSelectTool
-    from bokeh.embed import file_html
-    from bokeh.resources import CDN
-    plot_kmeans = bp.figure(
-        plot_width=plot_width
-        , plot_height=plot_height
-        , title=title
-        , tools= "pan,wheel_zoom,box_zoom,reset,hover"
-        , x_axis_type=None, y_axis_type=None, min_border=1)
-    palette = d3['Category20'][12] + d3['Category20b'][12]
-    color_map = bmo.CategoricalColorMapper(
-        factors=kmeans_df['cluster'].unique()
-        , palette=palette
-        )
-    plot_kmeans.scatter('x', 'y', source=kmeans_df,
-                        color={'field': 'cluster', 'transform': color_map},
-                        legend='cluster')
-    hover = plot_kmeans.select(dict(type=HoverTool))
-    hover.tooltips={"description": "@descripcion_del_proceso", "cluster": "@cluster"}
-    html = file_html(plot_kmeans, CDN, "Plot")
-    f = open(filename, 'w')
-    f.write(html)
-    f.close()
 
 
 
@@ -234,15 +206,45 @@ def exportLDA_vis(best_model, corpus, id2word, filename = 'pyLDAvis.html'):
     panel = pyLDAvis.gensim.prepare(best_model, corpus, id2word, mds='mmds')
     pyLDAvis.save_html(panel, filename)
 
+def exportKmeansDF(kmeans_df, filename = 'KMeansGraph.html', char_lenght = 200, title="KMeans clustering", plot_width=890, plot_height=600, title = "Plot"):
+    import bokeh.plotting as bp
+    from bokeh.palettes import d3
+    import bokeh.models as bmo
+    from bokeh.models import HoverTool, BoxSelectTool
+    from bokeh.embed import file_html
+    from bokeh.resources import CDN
+    plot_kmeans = bp.figure(
+        plot_width=plot_width
+        , plot_height=plot_height
+        , title=title
+        , tools= "pan,wheel_zoom,box_zoom,reset,hover"
+        , x_axis_type=None, y_axis_type=None, min_border=1)
+    palette = d3['Category20'][12] + d3['Category20b'][12]
+    color_map = bmo.CategoricalColorMapper(
+        factors=kmeans_df['cluster'].unique()
+        , palette=palette
+        )
+    plot_kmeans.scatter('x', 'y', source=kmeans_df,
+                        color={'field': 'cluster', 'transform': color_map},
+                        legend='cluster')
+    hover = plot_kmeans.select(dict(type=HoverTool))
+    hover.tooltips={"description": "@descripcion_del_proceso", "cluster": "@cluster"}
+    output_file(filename, mode='inline', title = title)
+    save(plot_kmeans)
+    # html = file_html(plot_kmeans, CDN, title)
+    # f = open(filename, 'w')
+    # f.write(html)
+    # f.close()
+
     # ---- LDA ----
 
 d_ = df.copy()[:100]
 vz, tfidf, vectorizer = GetVZandTFIDF(d_)
-corpus,id2word = setCorpusAux(d_)
+corpus, id2word = setCorpusAux(d_)
 # coherences, models,X,Y = exploreLDAmodels(d_,corpus,id2word, filename = "5. Model/LDA_Topics.png") # When the number is uncertain
 
 # ---- K-Means ----
-dist,sil_scores=GetClustersPerformance(vz, filename = "5. Model/KMeansGroupTest.png", k_max = 30) # K=29
+# dist,sil_scores=GetClustersPerformance(vz, filename = "5. Model/KMeansGroupTest.png", k_max = 30) # K=29
 num_clusters = 24
 kmeans = GetKmeans(vz, num_clusters)
 keywords_df = GetKeywordsKmeans(kmeans, vectorizer)
