@@ -55,7 +55,7 @@ module4UI <- function(id){
        , column(wellPanel(
          img(src = "https://github.com/ds4a82/secop-analysis/raw/master/6.%20Viz/shiny/img/team/yasmin_photo.jpg", style="width:100px;height:100px;display:block;margin-left:auto;margin-right:auto;")
         , h2("Yasmin Moya Villa, MSc")
-        , p("Associate Professor at the University of Cartagena")
+        , p("PhD Student")
         , a(icon(name = "envelope"), href = "mailto:ymoyav@unicartagena.edu.co")
         , a(icon(name = "linkedin"), href = "www.linkedin.com/in/yasmin-moya-villa")
        ), width = 4)
