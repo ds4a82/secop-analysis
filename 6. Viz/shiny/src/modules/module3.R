@@ -1,8 +1,8 @@
 module3UI <- function(id){
   ns <- NS(id)
   
-  lda <- paste(readLines("./model/pyLDAvis.html"), collapse="\n")
-  clusters <- paste(readLines("./model/KMeansGraphModified.html"), collapse="\n")
+  lda <- paste(readLines("./www/pyLDAvis.html"), collapse="\n")
+  clusters <- paste(readLines("./www/KMeansGraph.html"), collapse="\n")
   
   main <- list(""
     , wellPanel(
