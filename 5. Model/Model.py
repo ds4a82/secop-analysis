@@ -90,11 +90,12 @@ def GetKeywordsKmeans(kmeans, vectorizer):
         for j in sorted_centroids[i, :10]:
             topic_keywords.append(terms[j])
         all_keywords.append(topic_keywords)
-
+    
     keywords_df = pd.DataFrame(index=['topic_{0}'.format(i) for i in range(num_clusters)],
                                columns=['keyword_{0}'.format(i) for i in range(10)],
                                data=all_keywords)
     return keywords_df
+
 def GetKmeansDF(kmeans, data, vz, n_components = 2, n_iter = 500):
     kmeans_clusters = kmeans.predict(vz)
     kmeans_distances = kmeans.transform(vz)
@@ -207,13 +208,13 @@ def exportLDA_vis(best_model, corpus, id2word, filename = 'pyLDAvis.html'):
     pyLDAvis.save_html(panel, filename)
 
 def exportKmeansDF(kmeans_df, filename = 'KMeansGraph.html', char_lenght = 200, title="KMeans clustering", plot_width=890, plot_height=600, title = "Plot"):
-    import bokeh.plotting as bp
     from bokeh.palettes import d3
     import bokeh.models as bmo
     from bokeh.models import HoverTool, BoxSelectTool
-    from bokeh.embed import file_html
-    from bokeh.resources import CDN
-    plot_kmeans = bp.figure(
+    from bokeh.plotting import figure, output_file, save
+    # from bokeh.embed import file_html
+    # from bokeh.resources import CDN
+    plot_kmeans = figure(
         plot_width=plot_width
         , plot_height=plot_height
         , title=title
