@@ -4,7 +4,12 @@ d <- readRDS(parameters$data_filename)
 nums_ <- parameters$nums_
 cats_ <- parameters$cats_
 date_ <- parameters$date_
-  
+
+print(colnames(d))
+print(nums_)
+print(cats_)
+print(date_)
+
 # Categories
 for (i in 1:length(parameters$cats_)) { # i = 2
   setnames(x = d, old = parameters$cats_[i], new = paste0("cat", i, "_"))

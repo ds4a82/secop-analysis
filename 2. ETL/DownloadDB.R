@@ -89,5 +89,14 @@ d_secop_II[, .(
 
 d <- rbind(d_secop_I, d_secop_II)
 
-saveRDS(object = d, file = sprintf("6. Viz/shiny/data/secop.RDS"))
-write.table(x = d, file = sprintf("6. Viz/shiny/data/secop.csv"), sep = ",", na = "", row.names = F, fileEncoding = "latin1")
+# Cambiar los nombres de las columnas por nombres estéticamente presentables. 
+# d <- readRDS(file = "6. Viz/shiny/data/secop.RDS")
+d$`Department` <- d$departamento
+d$`ContractValue` <- d$`valor_del_contrato`
+d$`ContractType` <- d$tipo_de_contrato
+d$`Provider` <- d$proveedor_adjudicado
+d$`Client` <- d$nombre_entidad
+
+# Guardar la variable localmente para posterior manipulación
+saveRDS(object = d, file = "6. Viz/shiny/data/secop.RDS")
+write.table(x = d, file = "6. Viz/shiny/data/secop.csv", sep = ",", na = "", row.names = F, fileEncoding = "latin1")

@@ -160,7 +160,6 @@ module1 <- function(input, output, session){
         yaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
         , xaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
     )
-
   })
   
   # Bar chart for financial forecast
@@ -247,5 +246,4 @@ module1 <- function(input, output, session){
       ), keyby = `cat3_`]
     })
   )
-  
 }

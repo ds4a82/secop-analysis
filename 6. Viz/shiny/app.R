@@ -62,11 +62,11 @@ menu <- list(
 parameters <- list(
     ""
     , data_filename = "data/secop.RDS"
-    , cats_ = c("departamento", "tipo_de_contrato", "estado_contrato")
-    , nums_ = c("valor_del_contrato")
+    , cats_ = c("Department", "Contract Type", "fuente")
+    , nums_ = c("Contract Value")
     , date_ = "fecha_de_firma" # Must be single.
     , dash_color = "purple"
-    , title = "Dashboard"
+    , title = "SECOP Topics"
     , credential = data.table(
         Un = c("usuario")
         , Pd = c("contrasena")
@@ -91,5 +91,5 @@ for (file in list.files(
         source(file, local = TRUE) 
 }
 
-shiny::shinyApp(ui = ui, server = server)
+shiny::shinyApp(ui = ui, server = server, enableBookmarking = "server")
 
