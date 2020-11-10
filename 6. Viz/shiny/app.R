@@ -66,7 +66,7 @@ parameters <- list(
     , nums_ = c("Contract Value")
     , date_ = "fecha_de_firma" # Must be single.
     , dash_color = "purple"
-    , title = "SECOP Topics"
+    , title = img(src = 'https://github.com/ds4a82/secop-analysis/blob/master/6.%20Viz/logo/logo.png?raw=true', width = '200px', height = '50px')
     , credential = data.table(
         Un = c("usuario")
         , Pd = c("contrasena")
