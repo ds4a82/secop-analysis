@@ -25,7 +25,7 @@ menu <- list(
         active = TRUE
         , name = "Home"
         , tab = "module1" # Debe existir un módulo con este nombre
-        , icon = "wpexplorer"
+        , icon = "home"
     )
     , list(
         active = TRUE
