@@ -23,39 +23,39 @@ require(shinyjs)
 menu <- list(
     list(
         active = TRUE
-        , name = "Exploratory"
+        , name = "Home"
         , tab = "module1" # Debe existir un módulo con este nombre
+        , icon = "home"
+    )
+    , list(
+        active = TRUE
+        , name = "Exploratory"
+        , tab = "module2" # Debe existir un módulo con este nombre
         , icon = "wpexplorer"
     )
     , list(
         active = TRUE
         , name = "Geographic"
-        , tab = "module2" # Debe existir un módulo con este nombre
+        , tab = "module3" # Debe existir un módulo con este nombre
         , icon = "map-marked"
     )
     , list(
         active = TRUE
         , name = "Contractual Object"
-        , tab = "module3" # Debe existir un módulo con este nombre
+        , tab = "module4" # Debe existir un módulo con este nombre
         , icon = "file-alt"
     )
     , list(
         active = TRUE
-        , name = "Team"
-        , tab = "module4" # Debe existir un módulo con este nombre
-        , icon = "users"
-    )
-    , list(
-        active = TRUE
-        , name = "Docs"
+        , name = "Next Steps"
         , tab = "module5" # Debe existir un módulo con este nombre
         , icon = "file-pdf"
     )
     , list(
         active = TRUE
-        , name = "Video"
+        , name = "Acknowledgment"
         , tab = "module6" # Debe existir un módulo con este nombre
-        , icon = "file-video"
+        , icon = "users"
     )
 )
 
@@ -66,7 +66,7 @@ parameters <- list(
     , nums_ = c("Contract Value")
     , date_ = "fecha_de_firma" # Must be single.
     , dash_color = "purple"
-    , title = "SECOP Topics"
+    , title = img(src = 'https://github.com/ds4a82/secop-analysis/blob/master/6.%20Viz/logo/logo.png?raw=true', width = '150px', height = '50px')
     , credential = data.table(
         Un = c("usuario")
         , Pd = c("contrasena")

@@ -2,248 +2,33 @@ require(plotly)
 module1UI <- function(id){
   ns <- NS(id)
   
-  perspective <- radioButtons(
-    inputId = ns("perspective")
-    , label = h4("Category")
-    , choices = cats_
-    , selected = cats_[1]
-    # , inline = TRUE
-    # , selectize = TRUE
-  )
-  insight <- radioButtons(
-    # insight <- selectInput(
-    inputId = ns("insight")
-    , label = h4("Metric")
-    , choices = c("Count", nums_)
-    , selected = nums_[1]
-    # , inline = TRUE
-  )
-  bar <- radioButtons(
-    # bar <- selectInput(
-    inputId = ns("bar")
-    , label = h4("Period")
-    , choices = c("Weekly", "Monthly", "Quarterly", "Yearly")
-    , selected = c("Monthly")
-    # , selectize = TRUE
-    # , inline = TRUE
-  )
   main <- list(""
-               , fluidRow(""
-                          , crm_filtrosUI(ns("crm_filtros"))
-                          , column(width = 4
-                                   , valueBoxOutput(ns("box1"), width = 12)
-                                   , valueBoxOutput(ns("box2"), width = 12)
-                                   , valueBoxOutput(ns("box3"), width = 12)
-                          )
-                          , column(
-                            width = 4
-                            , valueBoxOutput(ns("box4"), width = 12)
-                            , valueBoxOutput(ns("box5"), width = 12)
-                            , valueBoxOutput(ns("box6"), width = 12)
-                          )
+               , br()
+               , wellPanel(
+                 h1("Context")
+                 , fluidRow(p("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."))
                )
-               , fluidRow(
-                 box(plotlyOutput(ns("circle"))
-                     , box(perspective, title = NULL, footer = NULL, width = 6, height = NULL, status = "primary")
-                     , box(insight, title = NULL, footer = NULL, width = 6, height = NULL, status = "primary")
-                     , title = "Contratos", footer = NULL, width = 6, height = NULL, status = "primary")
-                 , box(plotlyOutput(ns("bar_chart"))
-                       , box(bar, title= NULL, footer = NULL, width = 12, height = NULL, status = "primary")
-                       , title = "Firmas de contratos", footer = NULL, width = 6, height = NULL, status = "primary")
+               , br()
+               , wellPanel(
+                 h1("Problem")
+                 , fluidRow(p("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."))
                )
-               , fluidRow(
-                 tabBox(id = "gerencia_tabs"
-                        , title = 'Tablas'
-                        , tabPanel("All"
-                                   , DT::dataTableOutput(ns("table0"))
-                        )
-                        , tabPanel(cats_[1]
-                                   , DT::dataTableOutput(ns("table1"))
-                        )
-                        , tabPanel(cats_[2]
-                                   , DT::dataTableOutput(ns("table2"))
-                        )
-                        , tabPanel(cats_[3]
-                                   , DT::dataTableOutput(ns("table3"))
-                        )
-                        , width = 12)
-               ) 
+               , br()
+               , wellPanel(
+                 h1("Solution")
+                 , fluidRow(p("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."))
+               )
+               , br()
+               , wellPanel(
+                 h1("Methodology")
+                 , fluidRow(p("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."))
+               )
+               , br()
   )
   tagList(main)
-  # mainPanel(width = 12, main)
 }
 
 module1 <- function(input, output, session){
   # callModule(lineas, "lineas")
-  
-  logic <- callModule(crm_filtros, "crm_filtros")
-  
-  
-  # ValueBox 1
-  output$box1 <- renderBox(sprintf("Sum %s", nums_[1]), "dollar", "red", reactive({
-    comprss(d[logic(), sum(num1_, na.rm = T)])
-  }))
-  
-  # ValueBox 2
-  output$box2 <- renderBox("Future contracts", "credit-card", "green", reactive({
-    comprss(d[logic(), mean(num1_, na.rm = T)])
-  }))
-  
-  # ValueBox 3. Margen Promedio
-  output$box3 <- renderBox("Average money advance", "line-chart", "maroon", reactive({
-    comprss(d[logic(), .N])
-  }))
-  
-  # ValueBox 4. Ticket Promedio
-  output$box4 <- renderBox("Average value", "fire", "purple", reactive({
-    # Monthly sum
-    r <- d[logic(), sum(num1_, na.rm = T), month(date_)]
-    r <- r[!is.na(`month`), mean(V1)]
-    comprss(r)
-  }))
-  
-  # ValueBox 5. DIas promedio en facturar
-  output$box5 <- renderBox("Days until done", "flash", "yellow", reactive({
-    # Monthly mean
-    r <- d[logic(), mean(num1_, na.rm = T), month(date_)]
-    r <- r[!is.na(`month`), mean(V1)]
-    comprss(r)
-  }))
-  
-  # ValueBox 6. Número de oportunidades
-  output$box6 <- renderBox("Departaments", "credit-card", "black", reactive({
-    d[logic(), length(unique(cat1_))]
-  }))
-  
-  # PieChart:
-  output$circle <- renderPlotly({
-    
-    label_ = input$perspective
-    value_ = input$insight
-    logic = logic()
-    
-    for(i in 1:length(cats_)){
-      if(cats_[i] == label_){
-        d$label_ <- d[[paste0("cat", i, "_")]]
-        break
-      }
-    }
-    ds <- d[logic(), .(
-      count_ = .N
-      , num1_ = sum(num1_, na.rm = T)
-    ), keyby = label_]
-    for (i in 1:(length(nums_)+1)) {
-      if (value_ == "Count") {
-        ds$value_ <- ds$count_
-        break
-      }
-      if (nums_[i] == value_) {
-        ds$value_ <- ds[[paste0("num", i, "_")]]
-        break
-      }
-    }
-    plot_ly(
-      data = ds
-      , labels = ~label_
-      , values = ~value_
-      , type = "pie"
-      , hole = 0.5
-      , text = ~paste0(
-        nums_[1], ": ", comprss(`num1_`)
-        , "<br>", "Count"," : ", count_
-      )
-      , textinfo = "percent" # "label+percent"
-      , hoverinfo = "label+text+percent"
-      , showlegend = F
-    ) %>%
-    layout(
-        yaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
-        , xaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
-    )
-  })
-  
-  # Bar chart for financial forecast
-  output$bar_chart <- renderPlotly({
-    # timeframe <- "Semanal"
-    timeframe <- input$bar
-    d$timeframe_ <- d[[timeframe]]
-    
-    ds <- d[, .(
-      count_ = .N
-      , num1_ = sum(num1_, na.rm = T)
-      ), keyby = timeframe_]
-    ds <- d[logic(), .(
-      count_ = .N
-      , num1_ = sum(num1_, na.rm = T)
-      ), keyby = timeframe_]
-    plot_ly(
-      data = ds
-      , y = ~count_
-      , x = ~timeframe_
-      , name = "Count"
-      , type = "bar"
-      , hoverinfo = "text"
-      # , hovertemplate = ~paste0(timeframe_, ': %{x}')
-      , text = ~paste0(
-        "Count: ", count_
-        , "<br>Date: ", `timeframe_`
-      )
-    ) %>% add_trace( # Add margin line:
-      y = ~num1_
-      , name = nums_[1]
-      , yaxis = "y2"
-      , type = "scatter"
-      , mode = "lines"
-      , hoverinfo = "text"
-      , text = ~paste0(
-        nums_[1], ": ", comprss(num1_)
-        , "<br>Date: ", `timeframe_`
-      )
-    ) %>% layout(
-      xaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
-      , yaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = TRUE, showgrid = FALSE)
-      , yaxis2 = list(
-        tickfont = list(color = "red"),
-        overlaying = "y",
-        side = "right"
-      )
-      , barmode = "stack"
-      , showlegend = TRUE
-      , legend = list(orientation = 'h')
-    )
 
-  })
-  
-  output$table0 <- render_tables(
-    data = reactive({
-      d[logic(), ]
-    })
-  )
-
-  output$table1 <- render_tables(
-    data = reactive({
-      d[logic(), .(
-        'Count' = .N
-        , num1_ = sum(`num1_`, na.rm = T)
-      ), keyby = `cat1_`]
-    })
-  )
-  
-  output$table2 <- render_tables(
-    data = reactive({
-      d[logic(), .(
-        'Count' = .N
-        , num1_ = sum(`num1_`, na.rm = T)
-      ), keyby = `cat2_`]
-    })
-  )
-  
-  output$table3 <- render_tables(
-    data = reactive({
-      d[logic(), .(
-        'Count' = .N
-        , num1_ = sum(`num1_`, na.rm = T)
-      ), keyby = `cat3_`]
-    })
-  )
 }
