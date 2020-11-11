@@ -62,9 +62,9 @@ menu <- list(
 parameters <- list(
     ""
     , data_filename = "data/secop.RDS"
-    , cats_ = c("Department", "Contract Type", "fuente")
+    , cats_ = c("Department", "Contract Type", "Budget origin")
     , nums_ = c("Contract Value")
-    , date_ = "fecha_de_firma" # Must be single.
+    , date_ = "Sign date" # Must be single.
     , dash_color = "purple"
     , title = img(src = 'https://github.com/ds4a82/secop-analysis/blob/master/6.%20Viz/logo/logo.png?raw=true', width = '150px', height = '50px')
     , credential = data.table(
