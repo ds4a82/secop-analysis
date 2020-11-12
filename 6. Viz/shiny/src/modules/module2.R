@@ -218,34 +218,52 @@ module2 <- function(input, output, session){
   
   output$table0 <- render_tables(
     data = reactive({
-      d[logic(), ]
+      x <- d[logic(), ]
+      setnames(x = x, old = "cat1_", new = parameters$cats_[1])
+      setnames(x = x, old = "cat2_", new = parameters$cats_[2])
+      setnames(x = x, old = "cat3_", new = parameters$cats_[3])
+      setnames(x = x, old = "num1_", new = parameters$nums_[1])
+      setnames(x = x, old = "date_", new = parameters$date_)
+      x
     })
+    , round = c("Count"), currency = parameters$nums_[1]
   )
-  
+
   output$table1 <- render_tables(
     data = reactive({
-      d[logic(), .(
+      x <- d[logic(), .(
         'Count' = .N
         , num1_ = sum(`num1_`, na.rm = T)
       ), keyby = `cat1_`]
+      setnames(x = x, old = "cat1_", new = parameters$cats_[1])
+      setnames(x = x, old = "num1_", new = parameters$nums_[1])
+      x
     })
+    , round = c("Count"), currency = parameters$nums_[1]
   )
-  
+
   output$table2 <- render_tables(
     data = reactive({
-      d[logic(), .(
+      x  <- d[logic(), .(
         'Count' = .N
         , num1_ = sum(`num1_`, na.rm = T)
       ), keyby = `cat2_`]
+      setnames(x = x, old = "cat2_", new = parameters$cats_[2])
+      setnames(x = x, old = "num1_", new = parameters$nums_[1])
+      x
     })
+    , round = c("Count"), currency = parameters$nums_[1]
   )
-  
   output$table3 <- render_tables(
     data = reactive({
-      d[logic(), .(
+      x <- d[logic(), .(
         'Count' = .N
         , num1_ = sum(`num1_`, na.rm = T)
       ), keyby = `cat3_`]
+      setnames(x = x, old = "cat3_", new = parameters$cats_[3])
+      setnames(x = x, old = "num1_", new = parameters$nums_[1])
+      x
     })
+    , round = c("Count"), currency = parameters$nums_[1]
   )
 }
