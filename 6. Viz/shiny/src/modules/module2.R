@@ -226,7 +226,7 @@ module2 <- function(input, output, session){
       setnames(x = x, old = "date_", new = parameters$date_)
       x
     })
-    , round = c("Count"), currency = parameters$nums_[1]
+    , currency = parameters$nums_[1]
   )
 
   output$table1 <- render_tables(
