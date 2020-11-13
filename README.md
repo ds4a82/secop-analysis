@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus augue non 
 
 - Integer fermentum sapien vel ornare porta.:
    
-  - [imperdiet](#prerrequisitos)
+  - [imperdiet](#Flujograma)
   - [himenaeos](#instalaci%C3%B3n)
   - [ccumsan](#documentaci%C3%B3n)
   - [Suspendisse](#ejemplo)
@@ -30,18 +30,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus augue non 
   - [commodo](#licencia)
   - [ullamcorper](#contacto)   
 
-## Prerrequisitos
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
-</p>
-       
+## Flujograma
 
 Nulla eget purus nec urna elementum tincidunt ut ac mauris.
 
 * Tesseract
 * Poppler v0.68.0
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
+</p>
+       
 eget ultrices risus dignissim. Nam et pretium nisi. Nulla facilisi. Ut convallis sapien auctor ex aliquet, quis pharetra tortor dapibus. [Sed non sapien ex. Nullam sit amet orci et odio cursus aliquet.](https://ucd-dnp.github.io/ConTexto/seccion_instalacion.html)
 
 ## Instalación
