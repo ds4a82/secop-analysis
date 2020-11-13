@@ -64,8 +64,7 @@ Integer fermentum dapibus dictum. In ut dignissim massa. Nulla eget purus nec ur
 
 ## Licencia
 
-SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal se encuentra publicada bajo la licencia MIT <br />
-Copyleft (c) 2020 Data Science For All 3.0 - Team 82
+SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal se encuentra publicada bajo la licencia MIT <br/>Copyleft (c) 2020 Data Science For All 3.0 - Team 82
 
 Para mayor información puede consultar el archivo de [Licencia](https://github.com/ucd-dnp/contexto/blob/master/LICENSE)
 
