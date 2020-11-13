@@ -1,7 +1,9 @@
 
 # SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal
 
-![screenshot](https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/CCE.jpg "LEILA")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/CCE.jpg" />
+</p>
               
 ## Descripción
 
