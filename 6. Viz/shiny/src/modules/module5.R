@@ -18,11 +18,11 @@ module5UI <- function(id){
       , column(
         width = 6
         , wellPanel(
-         h2("2. Contracts manual categorization")
+         h2("2. Contracts categorization")
          , fluidRow(
-           p("The are several main categories already identified by the Colombia Compra Eficiente (CCE) team. Some of them involve \"health\", \"construction\", \"infraestructure\" and \"technology\" among many others. The next step would be to list the most relevant categories and semi-automatically categorize all the contracts based on the keywords in their description. For example the word \"hospital\" can be matched with the Health category.")
+           p("The are several main categories already identified by the Colombia Compra Eficiente (CCE) team. Some of them involve \"health\", \"construction\", \"infraestructure\" and \"technology\" among many others. The next step would be to list the most relevant categories and semi-automatically categorize all the contracts based on the keywords in their description. For example the word \"hospital\" can be matched within the Health category.")
            , br()
-           , p("After processing all the categories, Clustering and LDA topic modelling analysis can be re-run into each category to analize their main topics.")
+           , p("After processing all the categories, Clustering and LDA topic modelling analysis can be re-run into each category to analize their main topics and take decisions regarding national budget spending.")
           )
         )
       )

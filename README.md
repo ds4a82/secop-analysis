@@ -3,7 +3,6 @@ Análisis de datos a los datos del SECOP en Colombia. Es la plataforma en la cua
 
 1. Extración de info del secop
 2. 
-
 3. 
 4.1
 5. Repetir paso 3 hasta
