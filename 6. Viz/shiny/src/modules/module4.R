@@ -14,9 +14,86 @@ module4UI <- function(id){
                , br()
                , wellPanel(
                  h1("Topics")
-                 , p("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).")
                  , br()
                  , fluidRow(HTML(text = lda))
+                  , htmltools::HTML("
+                                  <ul>
+                  <li><p>
+                  Topic 30:
+                  Mantenimiento de vehículos en Sogamoso
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 29:
+                  Alimentación en hospitales de Montenegro y chachagui
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 28:
+                  Hidrocarburos en Cundinamarca, Chocó, departamento de Nariño y Regional Bolívar.
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 27:
+                  Gasolina para motores para desplazamiento de papelería, relacionada con temas culturales.
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 26:
+                  Medicos y medicina para batallon del ejercito por temas de coronavirus
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 25:
+                  Laboratorios, aires acondicionados y uniformes para cartagena
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 24:
+                  Obras de rehabilitación vial comunitaria en Santiago de Cali
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 23:
+                  Mantenimiento rutinario del parque automotor y la malla vial para el departamento del Atlántico.
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 22:
+                  Temas deportivos en la infancia, en el departamento del Casanare
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 21:
+                  Mejorar vigilancia para victimas del conflicto en el departamento del Valle
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 20:
+                  Agua Potable e Internet para docentes pacientes de covid en Bucaramanga y casanare
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 19:
+                  Informática en escuelas de Pereira, Santa Rosa y Cartago.
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 18:
+                  Temas deportivos para niños y niñas de Boyacá
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 17:
+                  Manejo de agua y residuos sólidos en la infancia en Valledupar
+                  </p></li>
+                  
+                  <li><p>
+                  Topic 16:
+                  Almacenamiento digital en Valle del Cauca y Magdalena
+                  </p></li>
+                  </ul>
+                  ")
                )
   )
   tagList(main)

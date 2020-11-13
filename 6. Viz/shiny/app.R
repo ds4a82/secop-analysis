@@ -10,6 +10,7 @@
 # ))
 
 # ---- Global Code Execution ----
+options(encoding = 'UTF-8')
 require(data.table)
 require(shinydashboard)
 require(shiny)
