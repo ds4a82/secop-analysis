@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus augue non 
 
 - Integer fermentum sapien vel ornare porta.:
    
-  - [imperdiet](#Flujograma)
+  - [Flujograma](#Flujograma)
   - [himenaeos](#instalaci%C3%B3n)
   - [ccumsan](#documentaci%C3%B3n)
   - [Suspendisse](#ejemplo)
