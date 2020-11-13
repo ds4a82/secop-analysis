@@ -1,36 +1,12 @@
 require(data.table)
 
 d <- readRDS(parameters$data_filename)
+
 nums_ <- parameters$nums_
 cats_ <- parameters$cats_
 date_ <- parameters$date_
 
 # Cambios a los nombres de las columnas
-
-d[departamento %in% "Distrito Capital de Bogotá", departamento := "Bogotá D.C."]
-d[departamento %in% "No Definido", departamento := as.character(NA)]
-
-d$dias_adicionados <- NULL
-d$tipodocproveedor <- NULL
-d$codigo_de_categoria_principal <- NULL
-d$estado_contrato <- NULL
-d$orden <- NULL
-
-setnames(x = d, old = "nombre_entidad", new = "Entity name")
-setnames(x = d, old = "nit_entidad", new = "NIT")
-setnames(x = d, old = "departamento", new = "Department")
-setnames(x = d, old = "ciudad", new = "City")
-setnames(x = d, old = "id_contrato", new = "Contract ID")
-setnames(x = d, old = "descripcion_del_proceso", new = "Contractual Object")
-setnames(x = d, old = "tipo_de_contrato", new = "Contract Type")
-setnames(x = d, old = "modalidad_de_contratacion", new = "Contract Modality")
-setnames(x = d, old = "fecha_de_firma", new = "Sign date")
-setnames(x = d, old = "fecha_de_inicio_de_ejecucion", new = "Start execution date")
-setnames(x = d, old = "fecha_de_fin_de_ejecucion", new = "End execution date")
-setnames(x = d, old = "documento_proveedor", new = "Provider ID")
-setnames(x = d, old = "proveedor_adjudicado", new = "Provider")
-setnames(x = d, old = "valor_del_contrato", new = "Contract Value")
-setnames(x = d, old = "origen_de_los_recursos", new = "Budget origin")
 
 print(nums_)
 print(cats_)
