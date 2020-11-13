@@ -10,14 +10,12 @@
 Análisis de datos a los datos del SECOP en Colombia. Es la plataforma en la cual las Entidades Estatales deben publicar los Documentos del Proceso, desde la planeación del contrato hasta su liquidación.
 
 
-1. Extración de info del secop
+1. Extración de infomación del Secop
 2. 
 3. 
-4.
-5. Repetir paso 3 hasta
-6. LDA
-7. Dashboard
-
+4. Repetir paso 3 hasta
+5. LDA
+6. Dashboard
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus augue non tortor volutpat varius. Nulla convallis mauris consequat nulla lacinia euismod. Nullam iaculis pharetra finibus. Integer tempor elit id arcu auctor, eu semper nunc scelerisque. Aliquam sed magna a augue eleifend vulputate sit amet quis urna. Aliquam erat volutpat. Ut lacinia vulputate nunc eget pulvinar. Suspendisse sem dolor, faucibus vel nibh ac, euismod accumsan nisl. Suspendisse ornare sollicitudin nunc facilisis viverra. Duis at ante nec tortor vestibulum lobortis ac eget lectus. Sed vitae iaculis nulla, ac gravida dolor. Donec dapibus imperdiet erat sed imperdiet. Fusce ut viverra enim. Aenean a pulvinar felis. Nullam vel ligula nec urna egestas dignissim.
@@ -33,6 +31,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus augue non 
   - [ullamcorper](#contacto)   
 
 ## Prerrequisitos
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
+</p>
+       
 
 Nulla eget purus nec urna elementum tincidunt ut ac mauris.
 
