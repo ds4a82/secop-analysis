@@ -7,6 +7,8 @@ module4UI <- function(id){
                , br()
                , wellPanel(
                  h1("Clusters")
+                 , fluidRow(p("The results of the clustering, it is needed to make a reduction of dimensionality. In this case, the technique to graph and have reduction of dimensionality is the TSNE.it is shown the top 3 clusters with the highest density. The cluster 6 has 65 % of all the data classified in it. The contracts that are in this cluster are the ones that are related to audiovisuals, environment issues and municipalities.The cluster 6 is  the most dense cluster because it have the 65% of all the dataset. This group is related to all contracts about castral information. This cluster contains several amount of contracts related to evaluation of properties at municipal and departmental level. The cluster 5 that is the next most dense have a share of 9% of all the dataset, it contains contracts that are related to monitoring and surveillance in the superintendence of projects, finally the third most dense cluster is the 8 with a share of 6% of the data, this cluster is related to all the contracts related to health and environment."))
+                 , br()
                  , fluidRow(HTML(text = clusters))
                )
                , br()
