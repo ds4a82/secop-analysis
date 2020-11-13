@@ -27,7 +27,7 @@ module2UI <- function(id){
     inputId = ns("bar")
     , label = h4("Period")
     , choices = c("Weekly", "Monthly", "Quarterly", "Yearly")
-    , selected = c("Monthly")
+    , selected = c("Quarterly")
     # , selectize = TRUE
     # , inline = TRUE
   )
