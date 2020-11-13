@@ -90,12 +90,51 @@ d_secop_II[, .(
 d <- rbind(d_secop_I, d_secop_II)
 
 # Cambiar los nombres de las columnas por nombres estéticamente presentables. 
+
+# Join de los tópicos y clusters
+options(scipen = 50)
+clusters <- fread(input = "5. Model/Cluster_Consolidado.csv")
+d[, id := paste0(`nit_entidad`, ifelse(is.na(`id_contrato`), "nan", `id_contrato`), as.character(`valor_del_contrato`), ".0")]
+d <- merge.data.table(x = d, y = clusters[,.(id, Cluster = cluster, `Topic 1` = Topico_0, `Topic 2` = Topico_1, `Topic 3` = Topico_2)], by = "id", all = T)
+
+d[departamento %in% "Distrito Capital de Bogotá", departamento := "Bogotá D.C."]
+d[departamento %in% "No Definido", departamento := as.character(NA)]
+
+unique(d$ca)
+
+d$dias_adicionados <- NULL
+d$tipodocproveedor <- NULL
+d$codigo_de_categoria_principal <- NULL
+d$estado_contrato <- NULL
+d$orden <- NULL
+
+setnames(x = d, old = "nombre_entidad", new = "Entity name")
+setnames(x = d, old = "nit_entidad", new = "NIT")
+setnames(x = d, old = "departamento", new = "Department")
+setnames(x = d, old = "ciudad", new = "City")
+setnames(x = d, old = "id_contrato", new = "Contract ID")
+setnames(x = d, old = "descripcion_del_proceso", new = "Contractual Object")
+setnames(x = d, old = "tipo_de_contrato", new = "Contract Type")
+setnames(x = d, old = "modalidad_de_contratacion", new = "Contract Modality")
+setnames(x = d, old = "fecha_de_firma", new = "Sign date")
+setnames(x = d, old = "fecha_de_inicio_de_ejecucion", new = "Start execution date")
+setnames(x = d, old = "fecha_de_fin_de_ejecucion", new = "End execution date")
+setnames(x = d, old = "documento_proveedor", new = "Provider ID")
+setnames(x = d, old = "proveedor_adjudicado", new = "Provider")
+setnames(x = d, old = "valor_del_contrato", new = "Contract Value")
+setnames(x = d, old = "origen_de_los_recursos", new = "Budget origin")
+
+d$id <- NULL
+d[, `Contractual Object` := substring(d$`Contractual Object`, 1, 100)]
+
 # d <- readRDS(file = "6. Viz/shiny/data/secop.RDS")
-d$`Department` <- d$departamento
-d$`ContractValue` <- d$`valor_del_contrato`
-d$`ContractType` <- d$tipo_de_contrato
-d$`Provider` <- d$proveedor_adjudicado
-d$`Client` <- d$nombre_entidad
+unique(d$`Contract Type`)
+d[`Contract Type` %in% "Prestación de servicios", `Contract Type` := "Prestación de Servicios"]
+d[`Contract Type` %in% "Otro Tipo de Contrato", `Contract Type` := "Otro"]
+d[`Contract Type` %in% "Suministros", `Contract Type` := "Suministro"]
+d[`Contract Type` %in% "Acuerdo Marco de Precios", `Contract Type` := "Acuerdo Marco"]
+d[`Contract Type` %in% "Negocio fiduciario", `Contract Type` := "Fiducia"]
+d[`Contract Type` %in% c("DecreeLaw092/2017", "No Especificado", "No definido"), `Contract Type` := NA]
 
 # Guardar la variable localmente para posterior manipulación
 saveRDS(object = d, file = "6. Viz/shiny/data/secop.RDS")
