@@ -90,17 +90,17 @@ d_secop_II[, .(
 d <- rbind(d_secop_I, d_secop_II)
 
 # Cambiar los nombres de las columnas por nombres estéticamente presentables. 
-# d <- readRDS(file = "6. Viz/shiny/data/secop.RDS")
-options(scipen = 50)
-clusters <- fread(input = "../../5. Model/Cluster_Consolidado.csv")
-d[, id := paste0(`nit_entidad`, ifelse(is.na(`id_contrato`), "nan", `id_contrato`), as.character(`valor_del_contrato`), ".0")]
-colnames(clusters)
 
 # Join de los tópicos y clusters
-d <- merge.data.table(x = d, y = clusters[,.(id, Cluster = cluster, `Tópico 1` = Topico_0, `Tópico 2` = Topico_1, `Tópico 3` = Topico_2)], by = "id", all = T)
+options(scipen = 50)
+clusters <- fread(input = "5. Model/Cluster_Consolidado.csv")
+d[, id := paste0(`nit_entidad`, ifelse(is.na(`id_contrato`), "nan", `id_contrato`), as.character(`valor_del_contrato`), ".0")]
+d <- merge.data.table(x = d, y = clusters[,.(id, Cluster = cluster, `Topic 1` = Topico_0, `Topic 2` = Topico_1, `Topic 3` = Topico_2)], by = "id", all = T)
 
 d[departamento %in% "Distrito Capital de Bogotá", departamento := "Bogotá D.C."]
 d[departamento %in% "No Definido", departamento := as.character(NA)]
+
+unique(d$ca)
 
 d$dias_adicionados <- NULL
 d$tipodocproveedor <- NULL
@@ -126,6 +126,15 @@ setnames(x = d, old = "origen_de_los_recursos", new = "Budget origin")
 
 d$id <- NULL
 d[, `Contractual Object` := substring(d$`Contractual Object`, 1, 100)]
+
+# d <- readRDS(file = "6. Viz/shiny/data/secop.RDS")
+unique(d$`Contract Type`)
+d[`Contract Type` %in% "Prestación de servicios", `Contract Type` := "Prestación de Servicios"]
+d[`Contract Type` %in% "Otro Tipo de Contrato", `Contract Type` := "Otro"]
+d[`Contract Type` %in% "Suministros", `Contract Type` := "Suministro"]
+d[`Contract Type` %in% "Acuerdo Marco de Precios", `Contract Type` := "Acuerdo Marco"]
+d[`Contract Type` %in% "Negocio fiduciario", `Contract Type` := "Fiducia"]
+d[`Contract Type` %in% c("DecreeLaw092/2017", "No Especificado", "No definido"), `Contract Type` := NA]
 
 # Guardar la variable localmente para posterior manipulación
 saveRDS(object = d, file = "6. Viz/shiny/data/secop.RDS")
