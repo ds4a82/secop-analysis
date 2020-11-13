@@ -76,7 +76,7 @@ Para comunicarse con la Unidad de Científicos de Datos (UCD) de la Data Science
 * [Cindy Ramirez](https://www.linkedin.com/in/cindy-ramirez-restrepo/)
 * [Jorge Enciso](https://www.linkedin.com/in/jorge-eduardo-enciso-agudelo-6b01b4116/)
 * [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
-* [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
 * [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
+* [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
 * [Yasmin Moya](ymoyav@unicartagena.edu.co)
 
