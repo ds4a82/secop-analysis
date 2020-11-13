@@ -73,11 +73,11 @@ Para mayor información puede consultar el archivo de [Licencia](https://github.
 
 Para comunicarse con la Unidad de Científicos de Datos (UCD) de la Data Science For All 3.0 - Team 82, lo puede hacer mediante 
 
-* https://www.linkedin.com/in/camilo-cabrera/
-* https://www.linkedin.com/in/cindy-ramirez-restrepo/
-* https://www.linkedin.com/in/jorge-eduardo-enciso-agudelo-6b01b4116/
-* https://www.linkedin.com/in/karina-mesa-a376aa27/
-* https://www.linkedin.com/in/pedro-nicolas-casas/
-* https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/
-* ymoyav@unicartagena.edu.co <ymoyav@unicartagena.edu.co>
+* [Camilo Cabrera](https://www.linkedin.com/in/camilo-cabrera/)
+* [Cindy Ramirez](https://www.linkedin.com/in/cindy-ramirez-restrepo/)
+* [Jorge Enciso](https://www.linkedin.com/in/jorge-eduardo-enciso-agudelo-6b01b4116/)
+* [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
+* [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
+* [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
+* [Yasmin Moya](ymoyav@unicartagena.edu.co)
 
