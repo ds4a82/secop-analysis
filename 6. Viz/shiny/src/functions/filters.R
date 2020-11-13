@@ -5,24 +5,24 @@ crm_filtrosUI <- function(id){
   cat1_input <- selectCheckboxGroupInput(
     id = ns("cat1_filter")
     , label = sprintf("Choose %s", cats_[1])
-    , choices = unique(d$cat1_)
-    , selected = unique(d$cat1_)
+    , choices = d[!is.na(cat1_), unique(cat1_)]
+    , selected = d[!is.na(cat1_), unique(cat1_)]
     , status = "danger"
   )
   
   cat2_input <- selectCheckboxGroupInput(
     id = ns("cat2_filter")
     , label = sprintf("Choose %s", cats_[2])
-    , choices = unique(d$cat2_)
-    , selected = unique(d$cat2_)
+    , choices = d[!is.na(cat2_), unique(cat2_)]
+    , selected = d[!is.na(cat2_), unique(cat2_)]
     , status = "warning"
   )
   
   cat3_input <- selectCheckboxGroupInput(
     id = ns("cat3_filter")
     , label = sprintf("Choose %s", cats_[3])
-    , choices = unique(d$cat3_)
-    , selected = unique(d$cat3_)
+    , choices = d[!is.na(cat3_), unique(cat3_)]
+    , selected = d[!is.na(cat3_), unique(cat3_)]
     , status = "primary"
   )
   
