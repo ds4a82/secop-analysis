@@ -47,6 +47,9 @@ eget ultrices risus dignissim. Nam et pretium nisi. Nulla facilisi. Ut convallis
 
 Para la instalación de la librería se debe utilizar el gestor de paquetes ``pip``. Por buenas prácticas, se sugiere antes de la instalación crear un entorno virtual que permita aislar las librerías y evitar conflictos de versiones con el entorno de desarrollo base del computador. Se debe mencionar que se requiere hacer instalaciones adicionales para el correcto funcionamiento de algunos módulos de la librería. Para más información, consultar la [sección de instalación en la página de documentación](https://ucd-dnp.github.io/ConTexto/seccion_instalacion.html).
 
+
+![](https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Secop.gif)
+
 ```
 pip install contexto
 ```
