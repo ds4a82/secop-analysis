@@ -1,24 +1,24 @@
-# secop-analysis
+
+# SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/CCE.jpg" />
+</p>
+              
+## Descripción
+
 Análisis de datos a los datos del SECOP en Colombia. Es la plataforma en la cual las Entidades Estatales deben publicar los Documentos del Proceso, desde la planeación del contrato hasta su liquidación.
+
 
 1. Extración de info del secop
 2. 
-
 3. 
-4.1
+4.
 5. Repetir paso 3 hasta
 6. LDA
 7. Dashboard
 
 
-
-# SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal
-
-![screenshot](https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/CCE.png "CCE")
-
-## Descripción
-
-Análisis de datos a los datos del SECOP en Colombia. Es la plataforma en la cual las Entidades Estatales deben publicar los Documentos del Proceso, desde la planeación del contrato hasta su liquidación.
 
 La librería de procesamiento y análisis de texto, ConTexto, tiene como objetivo principal proporcionar herramientas que simplifiquen las tareas y proyectos que involucren procesamiento y análisis de texto. La librería fue desarrollada en el lenguaje de programación de <em>Python</em> y contiene un conjunto de funciones que permiten realizar transformaciones y análisis de textos de forma simple, utilizando diferentes técnicas para lectura y escritura de archivos de texto, incluyendo reconocimiento óptico de caracteres (OCR), limpieza de textos y remoción de palabras no deseadas para el análisis (<em>stop words</em>), traducción y corrección de textos, generación de nubes de palabras, cálculo de similitudes entre textos, entre otras, reconocidas por su buen desempeño.
 
