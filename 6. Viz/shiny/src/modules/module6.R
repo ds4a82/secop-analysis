@@ -2,7 +2,7 @@ module6UI <- function(id){
   ns <- NS(id)
   main <- list(""
     , br()
-    , h1("Video presentation")
+    , h1("Video presentation", style = "text-align: center;")
     , br()
     # Video
     , fluidRow(
@@ -13,7 +13,7 @@ module6UI <- function(id){
         )
      )
     , br()
-    , h1("Team")
+    , h1("Team", style = "text-align: center;")
     , br()
     # Team
     , fluidRow(
