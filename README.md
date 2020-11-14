@@ -1,4 +1,4 @@
-# SecopTopics - Cluster analysis application for State Procurement - English
+# SecopTopics - Cluster analysis application for State Procurement - ENGLISH VERSION
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
@@ -90,9 +90,9 @@ To contact the Data Scientists Unit (UCD) of **Data Science For All 3.0 - Team 8
 * [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
 * [Yasmin Moya](ymoyav@unicartagena.edu.co)
 
-------------///------------
+------------------------------------------------///------------------------------------------------
 
-# SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal - ESPAÑOL
+# SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal - VERSIÓN EN ESPAÑOL
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
