@@ -61,10 +61,7 @@ De esta misma forma, para el desarrollo de la aplicación se abordó la siguient
 
 ## Análisis Geográfico 
 
-<iframe id="inlineFrameExample"
-    title="Inline Frame Example"
-    width="300"
-    height="200"
+<iframe>
     src="https://app.powerbi.com/view?r=eyJrIjoiZTAzYjY3OTUtNzc4Ni00MDcwLWIxNGYtOTM0OWI1YzMzNWIwIiwidCI6IjU3N2ZjMWQ4LTA5MjItNDU4ZS04N2JmLWVjNGY0NTVlYjYwMCIsImMiOjR9">
 </iframe>
 
