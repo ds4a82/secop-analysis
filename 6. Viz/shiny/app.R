@@ -67,7 +67,7 @@ parameters <- list(
     , nums_ = c("Contract Value")
     , date_ = "Sign date" # Must be single.
     , dash_color = "purple"
-    , title = img(src = 'Secop Topic', width = '150px', height = '50px')
+    , title = 'Secop Topic'
     , credential = data.table(
         Un = c("usuario")
         , Pd = c("contrasena")
