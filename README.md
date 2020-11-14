@@ -88,7 +88,7 @@ To contact the Data Scientists Unit (UCD) of **Data Science For All 3.0 - Team 8
 * [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
 * [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
 * [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
-* [Yasmin Moya](ymoyav@unicartagena.edu.co)
+* [Yasmin Moya](https://www.linkedin.com/in/yasmin-moya-villa)
 
  <br />
 ---------------------------------------------------------------///---------------------------------------------------------------
@@ -186,5 +186,5 @@ Para comunicarse con la Unidad de Científicos de Datos (UCD) de **Data Science 
 * [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
 * [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
 * [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
-* [Yasmin Moya](ymoyav@unicartagena.edu.co)
+* [Yasmin Moya](https://www.linkedin.com/in/yasmin-moya-villa)
 
