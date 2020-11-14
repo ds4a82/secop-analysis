@@ -2,7 +2,7 @@
 
 ------------///------------
 
-# **SecopTopics**- Aplicación de análisis de Clusters para la Contratación Estatal - ESPAÑOL
+# SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal - ESPAÑOL
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
@@ -20,8 +20,8 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
 - A continuación podrá consultar la siguiente información:
    
   - [¿Por qué importa este problema?](#¿Por-qué-importa-este-problema?)
-  - [Fuentes de Informacion](#Fuentes-de-Informacion)
-  - [Flujograma](#Flujograma)
+  - [Fuentes de Información](#Fuentes-de-Informacii%C3%B3n)
+  - [Flujograma de Trabajo](#Flujograma-de-Trabajo)
   - [himenaeos](#instalaci%C3%B3n)
   - [ccumsan](#documentaci%C3%B3n)
   - [Suspendisse](#ejemplo)
@@ -34,23 +34,24 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
 La agrupación de contratos por palabras clave proporciona una visión más amplia y realista de la contratación pública, al tener una mayor comprensión de los bienes o servicios que utilizan las entidades públicas. Por tanto, Colombia Compra Eficiente tendría información más clara y útil para generar valor real y ahorro en las compras públicas del país.
 
 
-## Fuentes de Informacion
 
+## Fuentes de Información
 
 [**SECOP - I**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
-
 La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de **9 millones de filas. Tiene 72 columnas** en las que cada columna corresponde a información sobre el proceso de contratación.
 
 [**SECOP - II**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
-
 La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de **527 mil filas. Tiene 54 columnas** en las que cada columna corresponde a información sobre el proceso de contratación.
 
 
-## Flujograma
+
+## Flujograma de Trabajo
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
 </p>
+
+
 
 ## Instalación
 
