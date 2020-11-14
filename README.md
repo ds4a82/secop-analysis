@@ -2,6 +2,7 @@
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/QR-2.png" />
 </p>
               
 ## General description
