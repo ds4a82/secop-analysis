@@ -49,7 +49,7 @@ We have developed this application to provide a tool to Colombia Buy Efficient a
 In the same way, for the development of the application the following methodology was addressed:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo-2.png" />
 </p>
 
 
@@ -147,7 +147,7 @@ Hemos desarrollado esta aplicación para brindar una herramienta a Colombia Comp
 De esta misma forma, para el desarrollo de la aplicación se abordó la siguiente metodología:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo-2.png" />
 </p>
 
 
