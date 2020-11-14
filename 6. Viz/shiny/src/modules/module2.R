@@ -27,7 +27,7 @@ module2UI <- function(id){
     inputId = ns("bar")
     , label = h4("Period")
     , choices = c("Weekly", "Monthly", "Quarterly", "Yearly")
-    , selected = c("Quarterly")
+    , selected = c("Yearly")
     # , selectize = TRUE
     # , inline = TRUE
   )
@@ -82,40 +82,44 @@ module2 <- function(input, output, session){
   
   
   # ValueBox 1
-  output$box1 <- renderBox(sprintf("Sum %s", nums_[1]), "dollar", "red", reactive({
-    comprss(d[logic(), sum(num1_, na.rm = T)])
-  }))
-  
-  # ValueBox 2
-  output$box2 <- renderBox("Future contracts", "credit-card", "green", reactive({
+  output$box1 <- renderBox("Number of Contracts", "file-contract", "green", reactive({
     comprss(d[logic(), mean(num1_, na.rm = T)])
   }))
   
-  # ValueBox 3. Margen Promedio
-  output$box3 <- renderBox("Average money advance", "line-chart", "maroon", reactive({
+  # ValueBox 2
+  output$box2 <- renderBox(sprintf("Total Contract Value", nums_[1]), "dollar", "red", reactive({
+    comprss(d[logic(), sum(num1_, na.rm = T)])
+  }))
+  # ValueBox 3
+  output$box3 <- renderBox("Average Contract Value", "line-chart", "purple", reactive({
     comprss(d[logic(), .N])
   }))
   
-  # ValueBox 4. Ticket Promedio
-  output$box4 <- renderBox("Average value", "fire", "purple", reactive({
+  # ValueBox 4
+  output$box4 <- renderBox("Number of Suppliers", "users", "orange", reactive({
     # Monthly sum
     r <- d[logic(), sum(num1_, na.rm = T), month(date_)]
     r <- r[!is.na(`month`), mean(V1)]
     comprss(r)
   }))
   
-  # ValueBox 5. DIas promedio en facturar
-  output$box5 <- renderBox("Days until done", "flash", "yellow", reactive({
+  # ValueBox 5
+  output$box5 <- renderBox("Average Contract per Supplier", "hand-holding-usd", "navy", reactive({
     # Monthly mean
     r <- d[logic(), mean(num1_, na.rm = T), month(date_)]
     r <- r[!is.na(`month`), mean(V1)]
     comprss(r)
   }))
   
-  # ValueBox 6. Número de oportunidades
-  output$box6 <- renderBox("Departaments", "credit-card", "black", reactive({
+  # ValueBox 6
+  output$box6 <- renderBox("Number of Departments", "globe-americas", "aqua", reactive({
     d[logic(), length(unique(cat1_))]
   }))
+  
+  t <- list(
+    family = "source sans pro",
+    size = 13,
+    color = 'black')
   
   # PieChart:
   output$circle <- renderPlotly({
@@ -155,11 +159,12 @@ module2 <- function(input, output, session){
         , "<br>", "Count"," : ", count_
       )
       , textinfo = "percent" # "label+percent"
+      , textposition = 'inside'
       , hoverinfo = "label+text+percent"
       , showlegend = F
     ) %>%
-      layout(
-        yaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
+      layout(font = t, 
+          yaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
         , xaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
       )
   })
@@ -201,11 +206,11 @@ module2 <- function(input, output, session){
         nums_[1], ": ", comprss(num1_)
         , "<br>Date: ", `timeframe_`
       )
-    ) %>% layout(
+    ) %>% layout(font = t, 
       xaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = FALSE, showgrid = FALSE)
       , yaxis = list(title = "", zeroline = FALSE, showline = FALSE, showticklabels = TRUE, showgrid = FALSE)
       , yaxis2 = list(
-        tickfont = list(color = "red"),
+        tickfont = list(color = "orange"),
         overlaying = "y",
         side = "right"
       )
