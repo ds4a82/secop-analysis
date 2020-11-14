@@ -63,7 +63,7 @@ menu <- list(
 parameters <- list(
     ""
     , data_filename = "data/secop.RDS"
-    , cats_ = c("Contract Type", "Department", "Topic 1")
+    , cats_ = c("Contract Type", "Department", "Topic", "Contract ID", "Provider ID")
     , nums_ = c("Contract Value")
     , date_ = "Sign date" # Must be single.
     , dash_color = "purple"

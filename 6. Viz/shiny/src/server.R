@@ -167,8 +167,13 @@ server <- function(input, output, session) {
     })
     cat(paste(allvalues, collapse = "\n"))
   })
-
+  
+  output$keepAlive <- renderText({ # Code to keep alive the app when running
+    req(input$count)
+    paste("keep alive ", input$count)
+  })
   # ---- Stop shiny app when browser tab is closed ---- 
+  session$allowReconnect(TRUE) # Permitir reconectar a la session que se tenía previamente
   session$onSessionEnded(stopApp)
   options(shiny.sanitize.errors = TRUE)
 }

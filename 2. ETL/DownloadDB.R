@@ -127,7 +127,6 @@ setnames(x = d, old = "origen_de_los_recursos", new = "Budget origin")
 d$id <- NULL
 d[, `Contractual Object` := substring(d$`Contractual Object`, 1, 100)]
 
-# d <- readRDS(file = "6. Viz/shiny/data/secop.RDS")
 unique(d$`Contract Type`)
 d[`Contract Type` %in% "Prestación de servicios", `Contract Type` := "Prestación de Servicios"]
 d[`Contract Type` %in% "Otro Tipo de Contrato", `Contract Type` := "Otro"]
@@ -135,6 +134,38 @@ d[`Contract Type` %in% "Suministros", `Contract Type` := "Suministro"]
 d[`Contract Type` %in% "Acuerdo Marco de Precios", `Contract Type` := "Acuerdo Marco"]
 d[`Contract Type` %in% "Negocio fiduciario", `Contract Type` := "Fiducia"]
 d[`Contract Type` %in% c("DecreeLaw092/2017", "No Especificado", "No definido"), `Contract Type` := NA]
+
+# d <- readRDS(file = "6. Viz/shiny/data/secop.RDS")
+d[`Topic 1` %in% 1, `Topic` := "01. Servicios Ambientales y de Salud en Villavicencio y Arauca."]
+d[`Topic 1` %in% 2, `Topic` := "02. Mantenimiento y respuestos."]
+d[`Topic 1` %in% 3, `Topic` := "03. Servicios de Mantenimiento preventivo y construcción."]
+d[`Topic 1` %in% 4, `Topic` := "04. Servicios de salud oriente."]
+d[`Topic 1` %in% 5, `Topic` := "05. Capacitación y arrendamientos en Sandanter."]
+d[`Topic 1` %in% 6, `Topic` := "06. Servicios de Tranporte e instalación."]
+d[`Topic 1` %in% 7, `Topic` := "07. Contratos Bogotá - Cauca."]
+d[`Topic 1` %in% 8, `Topic` := "08. Servicios de apoyo para niños y niñas."]
+d[`Topic 1` %in% 9, `Topic` := "09. Contatos vigilacia en Salud Medellin."]
+d[`Topic 1` %in% 10, `Topic` := "10. Servicios de sanidad para fuerzas militares en Ibague."]
+d[`Topic 1` %in% 11, `Topic` := "11. Contratos de Educación en regionales del SENA."]
+d[`Topic 1` %in% 12, `Topic` := "12. Vivienda en el departamento de Santander."]
+d[`Topic 1` %in% 13, `Topic` := "13. Prestación de servicios a discapacitados."]
+d[`Topic 1` %in% 14, `Topic` := "14. Servicios de impresión Barranquilla/Caldas."]
+d[`Topic 1` %in% 15, `Topic` := "15. Servicios médicos y de laboratorio en la policía."]
+d[`Topic 1` %in% 16, `Topic` := "16. Almacenamiento digital en Valle del Cauca y Magdalena."]
+d[`Topic 1` %in% 17, `Topic` := "17. Manejo de agua y residuos sólidos en la infancia en Valledupar."]
+d[`Topic 1` %in% 18, `Topic` := "18. Temas deportivos para niños y niñas de Boyacá."]
+d[`Topic 1` %in% 19, `Topic` := "19. Informática en escuelas de Pereira, Santa Rosa y Cartago."]
+d[`Topic 1` %in% 20, `Topic` := "20. Agua Potable e Internet para docentes pacientes de covid en Bucaramanga y casanare."]
+d[`Topic 1` %in% 21, `Topic` := "21. Mejorar vigilancia para victimas del conflicto en el departamento del Valle."]
+d[`Topic 1` %in% 22, `Topic` := "22. Temas deportivos en la infancia, en el departamento del Casanare."]
+d[`Topic 1` %in% 23, `Topic` := "23. Mantenimiento rutinario del parque automotor y la malla vial para el departamento del Atlántico."]
+d[`Topic 1` %in% 24, `Topic` := "24. Obras de rehabilitación vial comunitaria en Santiago de Cali."]
+d[`Topic 1` %in% 25, `Topic` := "25. Laboratorios, aires acondicionados y uniformes para Cartagena."]
+d[`Topic 1` %in% 26, `Topic` := "26. Medicos y medicina para batallon del ejercito por temas de Coronavirus."]
+d[`Topic 1` %in% 27, `Topic` := "27. Gasolina para motores para desplazamiento de papelería, relacionada con temas culturales."]
+d[`Topic 1` %in% 28, `Topic` := "28. Hidrocarburos en Cundinamarca, Chocó, departamento de Nariño y Regional Bolívar."]
+d[`Topic 1` %in% 29, `Topic` := "29. Alimentación en hospitales de Montenegro y Chachaguí."]
+d[`Topic 1` %in% 30, `Topic` := "30. Mantenimiento de vehículos en Sogamoso."]
 
 # Guardar la variable localmente para posterior manipulación
 saveRDS(object = d, file = "6. Viz/shiny/data/secop.RDS")
