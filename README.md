@@ -2,7 +2,7 @@
 
 ------------///------------
 
-# SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal - ESPAÑOL
+# **SecopTopics**- Aplicación de análisis de Clusters para la Contratación Estatal - ESPAÑOL
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
@@ -10,7 +10,7 @@
               
 ## Descripción General
 
-Presentando nuestro proyecto SECOP TOPICS: AGRUPACIÓN DE TEMAS DE CONTRATACIÓN PÚBLICA EN PALABRAS CLAVE.
+Presentando nuestro proyecto **SECOP TOPICS: AGRUPACIÓN DE TEMAS DE CONTRATACIÓN PÚBLICA EN PALABRAS CLAVE.**
 
 La contratación pública se refiere al proceso mediante el cual las autoridades públicas, como los departamentos gubernamentales o las autoridades locales, compran trabajo, bienes o servicios de las empresas. Dado que la contratación pública representa una parte sustancial del dinero de los contribuyentes, se espera que los gobiernos la lleven a cabo de manera eficiente y con altos estándares de conducta para garantizar una alta calidad en la prestación de servicios y salvaguardar el interés público.
 
@@ -39,11 +39,11 @@ La agrupación de contratos por palabras clave proporciona una visión más ampl
 
 [**SECOP - I**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
 
-La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de 9 millones de filas. Tiene 72 columnas en las que cada columna corresponde a información sobre el proceso de contratación.
+La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de **9 millones de filas. Tiene 72 columnas** en las que cada columna corresponde a información sobre el proceso de contratación.
 
 [**SECOP - II**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
 
-La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de 527 mil filas. Tiene 54 columnas en las que cada columna corresponde a información sobre el proceso de contratación.
+La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de **527 mil filas. Tiene 54 columnas** en las que cada columna corresponde a información sobre el proceso de contratación.
 
 
 ## Flujograma
