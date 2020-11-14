@@ -2,11 +2,12 @@ module5UI <- function(id){
   ns <- NS(id)
   main <- list(
     ""
+    , h2("Next steps")
     , fluidRow(
       img(src = "https://github.com/ds4a82/secop-analysis/blob/master/6.%20Viz/shiny/img/next-steps.jpg?raw=true", style="display: block;margin-left: auto;margin-right: auto;width: 50%;")
       )
     , br()
-    , h4('These are the main steps projected to deploy a real time dashboard designed to deliver insights within each contract category.', style="text-align:center;")
+    , p('These are the main steps projected to deploy a real time dashboard designed to deliver insights within each contract category.', style="text-align:center;")
     , br()
     , fluidRow(
       column(
