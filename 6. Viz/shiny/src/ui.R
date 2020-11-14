@@ -46,7 +46,7 @@ ui <- function(){shinyUI(dashboardPage(title = 'Secop Topics',
       )
     )
     , uiOutput("navtabs")
-    , textOutput("keepAlive")
+    , div(textOutput("keepAlive")) # tiene que verse para que se actualice. Intentar colocarlo de otro color o tamaño
   )
   , skin = parameters$dash_color
 ))}
