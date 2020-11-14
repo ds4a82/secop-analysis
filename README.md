@@ -6,7 +6,7 @@
               
 ## General description
 
-Presenting our project ** SECOP TOPICS: GROUPING OF PUBLIC PROCUREMENT ISSUES IN KEY WORDS. **
+Presenting our project **SECOP TOPICS: GROUPING OF PUBLIC PROCUREMENT ISSUES IN KEY WORDS.**
 
 Public procurement refers to the process by which public authorities, such as government departments or local authorities, purchase work, goods or services from companies. Given that public procurement represents a substantial part of taxpayers' money, governments are expected to carry it out efficiently and with high standards of conduct to ensure high quality service delivery and safeguard the public interest.
 
@@ -31,10 +31,10 @@ Grouping contracts by keywords provides a broader and more realistic view of pub
 ## Sources of Information
 
 [**SECOP - I**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
-The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than ** 9 million rows. It has 72 columns ** in which each column corresponds to information about the hiring process.
+The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than **9 million rows. It has 72 columns** in which each column corresponds to information about the hiring process.
 
 [**SECOP - II**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
-The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than ** 527 thousand rows. It has 54 columns ** in which each column corresponds to information about the hiring process.
+The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than **527 thousand rows. It has 54 columns** in which each column corresponds to information about the hiring process.
 
 ## Solution
 
@@ -90,8 +90,11 @@ To contact the Data Scientists Unit (UCD) of **Data Science For All 3.0 - Team 8
 * [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
 * [Yasmin Moya](ymoyav@unicartagena.edu.co)
 
+ <br />
 ------------------------------------------------///------------------------------------------------
+ <br />
 
+ 
 # SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal - VERSIÓN EN ESPAÑOL
 
 <p align="center">
