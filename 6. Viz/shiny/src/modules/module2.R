@@ -9,7 +9,7 @@ module2UI <- function(id){
   perspective <- radioButtons(
     inputId = ns("perspective")
     , label = h4("Category")
-    , choices = cats_
+    , choices = cats_[1:3]
     , selected = cats_[1]
     # , inline = TRUE
     # , selectize = TRUE
@@ -83,7 +83,7 @@ module2 <- function(input, output, session){
   
   # ValueBox 1
   output$box1 <- renderBox("Number of Contracts", "file-contract", "green", reactive({
-    comprss(d[logic(), mean(num1_, na.rm = T)])
+    format(d[logic(), length(cat4_)], digits = 0, big.mark = ",")
   }))
   
   # ValueBox 2
@@ -92,28 +92,23 @@ module2 <- function(input, output, session){
   }))
   # ValueBox 3
   output$box3 <- renderBox("Average Contract Value", "line-chart", "purple", reactive({
-    comprss(d[logic(), .N])
+    comprss(d[logic(), mean(num1_, na.rm = T)])
   }))
   
   # ValueBox 4
-  output$box4 <- renderBox("Number of Suppliers", "users", "orange", reactive({
-    # Monthly sum
-    r <- d[logic(), sum(num1_, na.rm = T), month(date_)]
-    r <- r[!is.na(`month`), mean(V1)]
-    comprss(r)
+  output$box4 <- renderBox("Number of Providers", "users", "orange", reactive({
+    format(d[logic(), length(unique(cat5_))], digits = 0, big.mark = ",")
   }))
   
   # ValueBox 5
-  output$box5 <- renderBox("Average Contract per Supplier", "hand-holding-usd", "navy", reactive({
+  output$box5 <- renderBox("Average Contract Provider", "hand-holding-usd", "navy", reactive({
     # Monthly mean
-    r <- d[logic(), mean(num1_, na.rm = T), month(date_)]
-    r <- r[!is.na(`month`), mean(V1)]
-    comprss(r)
+    comprss(d[logic(), sum(num1_, na.rm = T)/length(unique(cat5_))])
   }))
   
   # ValueBox 6
   output$box6 <- renderBox("Number of Departments", "globe-americas", "aqua", reactive({
-    d[logic(), length(unique(cat1_))]
+    d[logic(), length(unique(cat2_))]
   }))
   
   t <- list(
