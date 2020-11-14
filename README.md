@@ -76,7 +76,8 @@ The graphs above show that the most common words are “servicios”, “apoyo�
 
 SecopTopics - Cluster analysis application for State Procurement is published under the MIT Copyleft (c) 2020 Data Science For All 3.0 - Team 82 license
 
-For more information you can consult the [License](https://github.com/ucd-dnp/contexto/blob/master/LICENSE)
+For more information you can consult the [License](https://github.com/ds4a82/secop-analysis/blob/master/LICENSE)
+
 
 ## Contact
 
@@ -174,7 +175,7 @@ Los gráficos anteriores muestran que las palabras más comunes son “servicios
 
 SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal se encuentra publicada bajo la licencia MIT Copyleft (c) 2020 Data Science For All 3.0 - Team 82
 
-Para mayor información puede consultar el archivo de [Licencia](https://github.com/ucd-dnp/contexto/blob/master/LICENSE)
+Para mayor información puede consultar el archivo de [Licencia](https://github.com/ds4a82/secop-analysis/blob/master/LICENSE)
 
 ## Contacto
 
