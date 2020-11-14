@@ -48,7 +48,7 @@ menu <- list(
     )
     , list(
         active = TRUE
-        , name = "Docs"
+        , name = "Next Steps"
         , tab = "module5" # Debe existir un módulo con este nombre
         , icon = "file-pdf"
     )

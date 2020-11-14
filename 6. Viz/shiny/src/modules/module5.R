@@ -2,6 +2,11 @@ module5UI <- function(id){
   ns <- NS(id)
   main <- list(
     ""
+    , fluidRow(
+      img(src = "https://github.com/ds4a82/secop-analysis/blob/master/6.%20Viz/shiny/img/next-steps.jpg?raw=true", style="display: block;margin-left: auto;margin-right: auto;width: 50%;")
+      )
+    , br()
+    , h4('These are the main steps projected to deploy a real time dashboard designed to deliver insights within each contract category.', style="text-align:center;")
     , br()
     , fluidRow(
       column(
@@ -28,17 +33,6 @@ module5UI <- function(id){
       )
     )
     , br()
-    , h1("White paper", style = "text-align: center;")
-    , br()
-    # Document
-    , fluidRow(
-      ""
-      , column(width = 2)
-      , column(width = 8
-               , HTML('<iframe width="100%" height="500" src="https://www.mintic.gov.co/portal/604/articles-145965_recurso_1.pdf" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
-      )
-      , column(width = 2)
-    )  
   )
   tagList(main)
 }
