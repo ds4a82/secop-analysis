@@ -19,8 +19,9 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
 
 - A continuación podrá consultar la siguiente información:
    
-  - [Flujograma](#Flujograma)
+  - [¿Por qué importa este problema?](#¿Por-qué-importa-este-problema?)
   - [Fuentes de Informacion](#Fuentes-de-Informacion)
+  - [Flujograma](#Flujograma)
   - [himenaeos](#instalaci%C3%B3n)
   - [ccumsan](#documentaci%C3%B3n)
   - [Suspendisse](#ejemplo)
@@ -35,6 +36,12 @@ La agrupación de contratos por palabras clave proporciona una visión más ampl
 
 ## Fuentes de Informacion
 
+
+[SECOP - I](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk)
+La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de 9 millones de filas. Tiene 72 columnas en las que cada columna corresponde a información sobre el proceso de contratación.
+
+[SECOP - II](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt)
+La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de 527 mil filas. Tiene 54 columnas en las que cada columna corresponde a información sobre el proceso de contratación.
 
 
 ## Flujograma
