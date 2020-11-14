@@ -1,4 +1,4 @@
-# SecopTopics - Cluster analysis application for State Procurement - ENGLISH VERSION
+# SECOPTOPICS - Cluster analysis application for State Procurement - ENGLISH VERSION
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
@@ -88,14 +88,14 @@ To contact the Data Scientists Unit (UCD) of **Data Science For All 3.0 - Team 8
 * [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
 * [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
 * [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
-* [Yasmin Moya](ymoyav@unicartagena.edu.co)
+* [Yasmin Moya](https://www.linkedin.com/in/yasmin-moya-villa)
 
  <br />
 ---------------------------------------------------------------///---------------------------------------------------------------
  <br />
 
  
-# SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal - VERSIÓN EN ESPAÑOL
+# SECOPTOPICS - Aplicación de análisis de Clusters para la Contratación Estatal - VERSIÓN EN ESPAÑOL
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
@@ -186,5 +186,5 @@ Para comunicarse con la Unidad de Científicos de Datos (UCD) de **Data Science 
 * [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
 * [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
 * [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
-* [Yasmin Moya](ymoyav@unicartagena.edu.co)
+* [Yasmin Moya](https://www.linkedin.com/in/yasmin-moya-villa)
 
