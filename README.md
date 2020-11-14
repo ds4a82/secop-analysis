@@ -5,34 +5,34 @@
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
 </p>
               
-## Descripción
+## Descripción General
 
-Análisis de datos a los datos del SECOP en Colombia. Es la plataforma en la cual las Entidades Estatales deben publicar los Documentos del Proceso, desde la planeación del contrato hasta su liquidación.
+Presentando nuestro proyecto SECOP TOPICS: AGRUPACIÓN DE TEMAS DE CONTRATACIÓN PÚBLICA EN PALABRAS CLAVE.
 
+La contratación pública se refiere al proceso mediante el cual las autoridades públicas, como los departamentos gubernamentales o las autoridades locales, compran trabajo, bienes o servicios de las empresas. Dado que la contratación pública representa una parte sustancial del dinero de los contribuyentes, se espera que los gobiernos la lleven a cabo de manera eficiente y con altos estándares de conducta para garantizar una alta calidad en la prestación de servicios y salvaguardar el interés público.
 
-1. Extración de infomación del Secop
-2. 
-3. 
-4. Repetir paso 3 hasta
-5. LDA
-6. Dashboard
+De esta forma, es importante analizar la plataforma en la cual las Entidades Estatales deben publicar los Documentos del Proceso, desde la planeación del contrato hasta su liquidación.
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus augue non tortor volutpat varius. Nulla convallis mauris consequat nulla lacinia euismod. Nullam iaculis pharetra finibus. Integer tempor elit id arcu auctor, eu semper nunc scelerisque. Aliquam sed magna a augue eleifend vulputate sit amet quis urna. Aliquam erat volutpat. Ut lacinia vulputate nunc eget pulvinar. Suspendisse sem dolor, faucibus vel nibh ac, euismod accumsan nisl. Suspendisse ornare sollicitudin nunc facilisis viverra. Duis at ante nec tortor vestibulum lobortis ac eget lectus. Sed vitae iaculis nulla, ac gravida dolor. Donec dapibus imperdiet erat sed imperdiet. Fusce ut viverra enim. Aenean a pulvinar felis. Nullam vel ligula nec urna egestas dignissim.
-
-- Integer fermentum sapien vel ornare porta.:
+- A continuación podrá consultar la siguiente información:
    
+  - [¿Por_qué_importa_este_problema?](#¿Porqué_importa_este_problema?)
   - [Flujograma](#Flujograma)
   - [himenaeos](#instalaci%C3%B3n)
   - [ccumsan](#documentaci%C3%B3n)
   - [Suspendisse](#ejemplo)
   - [tincidunt](#contribuciones)
-  - [commodo](#licencia)
-  - [ullamcorper](#contacto)   
+  - [Licencia](#licencia)
+  - [Contacto](#contacto)   
+
+## ¿Por_qué_importa_este_problema?
+
+La agrupación de contratos por palabras clave proporciona una visión más amplia y realista de la contratación pública, al tener una mayor comprensión de los bienes o servicios que utilizan las entidades públicas. Por tanto, Colombia Compra Eficiente tendría información más clara y útil para generar valor real y ahorro en las compras públicas del país.
+
 
 ## Flujograma
 
-Nulla eget purus nec urna elementum tincidunt ut ac mauris.
+Workflow.
 
 * Tesseract
 * Poppler v0.68.0
