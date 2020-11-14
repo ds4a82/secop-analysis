@@ -1,4 +1,9 @@
 
+
+------------///------------
+
+# ESPAÑOL
+
 # SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal
 
 <p align="center">
@@ -16,7 +21,6 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
 
 - A continuación podrá consultar la siguiente información:
    
-  - [¿Por_qué_importa_este_problema?](#¿Porqué_importa_este_problema?)
   - [Flujograma](#Flujograma)
   - [himenaeos](#instalaci%C3%B3n)
   - [ccumsan](#documentaci%C3%B3n)
@@ -25,7 +29,7 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
   - [Licencia](#licencia)
   - [Contacto](#contacto)   
 
-## ¿Por_qué_importa_este_problema?
+## ¿Por qué importa este problema?
 
 La agrupación de contratos por palabras clave proporciona una visión más amplia y realista de la contratación pública, al tener una mayor comprensión de los bienes o servicios que utilizan las entidades públicas. Por tanto, Colombia Compra Eficiente tendría información más clara y útil para generar valor real y ahorro en las compras públicas del país.
 
