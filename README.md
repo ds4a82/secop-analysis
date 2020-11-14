@@ -1,4 +1,94 @@
+# SecopTopics - Cluster analysis application for State Procurement - English
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
+</p>
+              
+## General description
+
+Presenting our project ** SECOP TOPICS: GROUPING OF PUBLIC PROCUREMENT ISSUES IN KEY WORDS. **
+
+Public procurement refers to the process by which public authorities, such as government departments or local authorities, purchase work, goods or services from companies. Given that public procurement represents a substantial part of taxpayers' money, governments are expected to carry it out efficiently and with high standards of conduct to ensure high quality service delivery and safeguard the public interest.
+
+In this way, it is important to analyze the platform on which the State Entities must publish the Process Documents, from the planning of the contract to its settlement.
+
+
+- Below you can consult the following information:
+   
+   - [Problem](#Problem?)
+   - [Sources of Information](#Sources-of-Information)
+   - [Solution](#Solution)
+   - [Work Flow Chart](#Work-Flow-Chart)
+   - [Geographic Analysis](#Geographic-Analysis)
+   - [Clusters](#Clusters)
+   - [License](#license)
+   - [Contact](#contact)
+
+## Problem
+
+Grouping contracts by keywords provides a broader and more realistic view of public procurement, by having a better understanding of the goods or services used by public entities. Therefore, Colombia Buy Efficient would have clearer and more useful information to generate real value and savings in public purchases in the country.
+
+## Sources of Information
+
+[**SECOP - I**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
+The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than ** 9 million rows. It has 72 columns ** in which each column corresponds to information about the hiring process.
+
+[**SECOP - II**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
+The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than ** 527 thousand rows. It has 54 columns ** in which each column corresponds to information about the hiring process.
+
+## Solution
+
+We have developed this application to provide a tool to Colombia Buy Efficient and to the general public that allows them to achieve a greater knowledge of the goods and services that public entities are buying. To build the application we follow these steps:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Solution.png" />
+</p>
+
+## Work Flow Chart
+
+In the same way, for the development of the application the following methodology was addressed:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
+</p>
+
+
+## Geographic Analysis 
+
+![](https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Secop.gif)
+
+## Clusters
+
+The results of the grouping, it is necessary to make a dimensionality reduction. In this case, the technique to graph and have dimensionality reduction is the TSNE. The first 3 conglomerates with the highest density are shown. Cluster 6 has 65% of all classified data in it. The contracts found in this cluster are those related to audiovisuals, environmental issues and municipalities. Cluster 6 is the densest cluster because it has 65% of the entire data set. This group is related to all contracts on castral information. This group contains various amounts of contracts related to property appraisal at the municipal and departmental level. Group 5, which is the next most dense, has a participation of 9% of the entire data set, contains contracts that are related to monitoring and surveillance in the superintendence of projects, finally the third densest group is 8 with a 6% share of data, this cluster is related to all contracts related to health and the environment.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Clusters.png" />
+</p>
+
+The graphs above show that the most common words are “servicios”, “apoyo” y “prestasi”. For bigrams, the most common word pairs are: “prestaci, servicios” and “servicios, profesionales”. Finally, the most common trigrams in SECOP I are “servicios, apoyo gesti” and “prestaci, servicios, apoyo”. This suggests that some specialized cleaning and manipulation methods would need to be performed on the words in order to better group them.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/WordCloud.png" />
+</p>
+
+
+## License
+
+SecopTopics - Cluster analysis application for State Procurement is published under the MIT Copyleft (c) 2020 Data Science For All 3.0 - Team 82 license
+
+For more information you can consult the [License](https://github.com/ucd-dnp/contexto/blob/master/LICENSE)
+
+## Contact
+
+To contact the Data Scientists Unit (UCD) of **Data Science For All 3.0 - Team 82**, you can do so through:
+
+* [Camilo Cabrera](https://www.linkedin.com/in/camilo-cabrera/)
+* [Cindy Ramirez](https://www.linkedin.com/in/cindy-ramirez-restrepo/)
+* [Jorge Enciso](https://www.linkedin.com/in/jorge-eduardo-enciso-agudelo-6b01b4116/)
+* [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
+* [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
+* [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
+* [Yasmin Moya](ymoyav@unicartagena.edu.co)
 
 ------------///------------
 
