@@ -1,4 +1,4 @@
-# SecopTopics - Cluster analysis application for State Procurement - ENGLISH VERSION
+# SECOPTOPICS - Cluster analysis application for State Procurement - ENGLISH VERSION
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
@@ -76,7 +76,8 @@ The graphs above show that the most common words are “servicios”, “apoyo�
 
 SecopTopics - Cluster analysis application for State Procurement is published under the MIT Copyleft (c) 2020 Data Science For All 3.0 - Team 82 license
 
-For more information you can consult the [License](https://github.com/ucd-dnp/contexto/blob/master/LICENSE)
+For more information you can consult the [License](https://github.com/ds4a82/secop-analysis/blob/master/LICENSE)
+
 
 ## Contact
 
@@ -88,14 +89,14 @@ To contact the Data Scientists Unit (UCD) of **Data Science For All 3.0 - Team 8
 * [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
 * [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
 * [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
-* [Yasmin Moya](ymoyav@unicartagena.edu.co)
+* [Yasmin Moya](https://www.linkedin.com/in/yasmin-moya-villa)
 
  <br />
 ---------------------------------------------------------------///---------------------------------------------------------------
  <br />
 
  
-# SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal - VERSIÓN EN ESPAÑOL
+# SECOPTOPICS - Aplicación de análisis de Clusters para la Contratación Estatal - VERSIÓN EN ESPAÑOL
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
@@ -174,7 +175,7 @@ Los gráficos anteriores muestran que las palabras más comunes son “servicios
 
 SecopTopics - Aplicación de análisis de Clusters para la Contratación Estatal se encuentra publicada bajo la licencia MIT Copyleft (c) 2020 Data Science For All 3.0 - Team 82
 
-Para mayor información puede consultar el archivo de [Licencia](https://github.com/ucd-dnp/contexto/blob/master/LICENSE)
+Para mayor información puede consultar el archivo de [Licencia](https://github.com/ds4a82/secop-analysis/blob/master/LICENSE)
 
 ## Contacto
 
@@ -186,5 +187,5 @@ Para comunicarse con la Unidad de Científicos de Datos (UCD) de **Data Science 
 * [Karina Mesa](https://www.linkedin.com/in/karina-mesa-a376aa27/)
 * [Pedro Casas](https://www.linkedin.com/in/pedro-nicolas-casas/)
 * [Samuel Perez](https://www.linkedin.com/in/samuel-perez-spatial-data-scientist/)
-* [Yasmin Moya](ymoyav@unicartagena.edu.co)
+* [Yasmin Moya](https://www.linkedin.com/in/yasmin-moya-villa)
 
