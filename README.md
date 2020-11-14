@@ -19,8 +19,9 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
 
 - A continuación podrá consultar la siguiente información:
    
-  - [¿Por qué importa este problema?](#¿Por-qué-importa-este-problema?)
+  - [Problema](#Problema?)
   - [Fuentes de Información](#Fuentes-de-Informacii%C3%B3n)
+  - [Solución](#Soluci%C3%B3n)
   - [Flujograma de Trabajo](#Flujograma-de-Trabajo)
   - [himenaeos](#instalaci%C3%B3n)
   - [ccumsan](#documentaci%C3%B3n)
@@ -29,11 +30,9 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
   - [Licencia](#licencia)
   - [Contacto](#contacto)   
 
-## ¿Por qué importa este problema?
+## Problema
 
 La agrupación de contratos por palabras clave proporciona una visión más amplia y realista de la contratación pública, al tener una mayor comprensión de los bienes o servicios que utilizan las entidades públicas. Por tanto, Colombia Compra Eficiente tendría información más clara y útil para generar valor real y ahorro en las compras públicas del país.
-
-
 
 ## Fuentes de Información
 
@@ -43,19 +42,30 @@ La información es auto documentada por las entidades públicas del país. Cada 
 [**SECOP - II**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
 La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de **527 mil filas. Tiene 54 columnas** en las que cada columna corresponde a información sobre el proceso de contratación.
 
+## Solución
 
+Hemos desarrollado esta aplicación para brindar una herramienta a Colombia Compra Efficiente y al público en general que les permita lograr un mayor conocimiento de los bienes y servicios que las entidades públicas están comprando. Para construir la aplicación seguimos estos pasos:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Solution.png" />
+</p>
 
 ## Flujograma de Trabajo
+
+De esta misma forma, para el desarrollo de la aplicación se abordó la siguiente metodología:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
 </p>
 
 
-
 ## Instalación
 
-Para la instalación de la librería se debe utilizar el gestor de paquetes ``pip``. Por buenas prácticas, se sugiere antes de la instalación crear un entorno virtual que permita aislar las librerías y evitar conflictos de versiones con el entorno de desarrollo base del computador. Se debe mencionar que se requiere hacer instalaciones adicionales para el correcto funcionamiento de algunos módulos de la librería. Para más información, consultar la [sección de instalación en la página de documentación](https://ucd-dnp.github.io/ConTexto/seccion_instalacion.html).
+Los gráficos anteriores muestran que las palabras más comunes son “servicios”, “apoyo” y “prestasi”. Para los bigramas, los pares de palabras más comunes son: “prestaci, servicios” y “servicios, profesionales”. Finalmente, los trigramas más comunes en SECOP I son “servicios, apoyo gesti” y “prestaci, servicios, apoyo”. Esto sugiere que sería necesario realizar algunos métodos especializados de limpieza y manipulación sobre las palabras para poder agruparlas mejor.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
+</p>
 
 
 ![](https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Secop.gif)
@@ -85,7 +95,7 @@ Para mayor información puede consultar el archivo de [Licencia](https://github.
 
 ## Contacto
 
-Para comunicarse con la Unidad de Científicos de Datos (UCD) de la Data Science For All 3.0 - Team 82, lo puede hacer mediante 
+Para comunicarse con la Unidad de Científicos de Datos (UCD) de **Data Science For All 3.0 - Team 82**, lo puede hacer mediante 
 
 * [Camilo Cabrera](https://www.linkedin.com/in/camilo-cabrera/)
 * [Cindy Ramirez](https://www.linkedin.com/in/cindy-ramirez-restrepo/)
