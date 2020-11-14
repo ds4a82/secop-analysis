@@ -6,7 +6,7 @@ module4UI <- function(id){
   main <- list(""
                , br()
                , wellPanel(
-                 h1("Clusters")
+                 h1("Clusters", style = "text-align:center;")
                  , fluidRow(
                    column(width = 8, HTML(text = clusters))
                    , column(width = 4, style = "padding-left:60px"
@@ -30,10 +30,13 @@ module4UI <- function(id){
                )
                , br()
                , wellPanel(
-                 h1("Topics")
+                 h1("Topics", style = "text-align:center;")
+                 , br()
+                , HTML("Using statistical models and computer science we could identify 30 main topics that flourished without manual categorization. The computer sets 30 'layers' or topics between contracts and the words in their description. Based on that, it groups the words most relevat to each topic; ending in the interactive visualization seen below. <br><br>Hover over every topic on the left to highlight the most relevant words of that topic on the right.")
                  , br()
                  , fluidRow(HTML(text = lda))
                   , htmltools::HTML("
+                  <h4>Topic description</h4>
                                   <ul>
 <li><p>Topic 1: Servicios Ambientales y de Salud en Villavicencio y Arauca.</p></li>
 

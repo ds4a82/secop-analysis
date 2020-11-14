@@ -1,7 +1,7 @@
 # SECOPTOPICS - Cluster analysis application for State Procurement - ENGLISH VERSION
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/QR-2.png" />
 </p>
               
 ## General description
@@ -99,7 +99,7 @@ To contact the Data Scientists Unit (UCD) of **Data Science For All 3.0 - Team 8
 # SECOPTOPICS - Aplicación de análisis de Clusters para la Contratación Estatal - VERSIÓN EN ESPAÑOL
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/logo.png" />
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/QR-2.png" />
 </p>
               
 ## Descripción General
