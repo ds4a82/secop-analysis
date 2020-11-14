@@ -12,12 +12,12 @@ module1UI <- function(id){
                , br()
                , wellPanel(
                  h1("Problem")
-                 , fluidRow(p("Due to the large number of contracts registered on the SECOP platforms (+10 million), Colombia Compra Eficiente requires to group contracts by identifying common words in the contractual object to generate insights, optimize the public procurement process, and finally help public entities to improve purchasing. However, this grouping is done manually, involving time and effort that could be used in more relevant activities.", style="font-size:20px;"))
+                 , fluidRow(p("Due to the large number of contracts registered on the SECOP platforms (+10 million), Colombia Compra Eficiente requires to group contracts by identifying common words in the contractual object to generate insights, optimize the public procurement process, and finally help public entities to improve purchasing. However, this grouping is done manually, involving time and effort that could be used in more relevant activities.", style="font-size:20px;margin-left:25px;"))
                )
                , br()
                , wellPanel(
                  h1("Solution")
-                 , fluidRow(p("We have developed this application to provide a tool to Colombia Compra Efficient and the general public that allows them to achieve a greater understanding of the goods and services that public entities are buying. To build the app we follow this steps:", style="font-size:20px;")
+                 , fluidRow(p("We have developed this application to provide a tool to Colombia Compra Efficient and the general public that allows them to achieve a greater understanding of the goods and services that public entities are buying. To build the app we follow this steps:", style="font-size:20px;margin-left:25px;")
                  , img(src = "https://github.com/ds4a82/secop-analysis/blob/master/6.%20Viz/shiny/img/Diagram.png?raw=true", style="width:600px;height:400px;display:block;margin-left:auto;margin-right:auto;")
                ))
                , br()
