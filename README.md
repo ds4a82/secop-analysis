@@ -24,9 +24,7 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
   - [Solución](#Soluci%C3%B3n)
   - [Flujograma de Trabajo](#Flujograma-de-Trabajo)
   - [Análisis Geográfico](#Análisis-Geográfico)
-  - [ccumsan](#documentaci%C3%B3n)
-  - [Suspendisse](#ejemplo)
-  - [tincidunt](#contribuciones)
+  - [Clusters](#Clusters)
   - [Licencia](#licencia)
   - [Contacto](#contacto)   
 
@@ -61,48 +59,23 @@ De esta misma forma, para el desarrollo de la aplicación se abordó la siguient
 
 ## Análisis Geográfico 
 
-<iframe>
-    src="https://app.powerbi.com/view?r=eyJrIjoiZTAzYjY3OTUtNzc4Ni00MDcwLWIxNGYtOTM0OWI1YzMzNWIwIiwidCI6IjU3N2ZjMWQ4LTA5MjItNDU4ZS04N2JmLWVjNGY0NTVlYjYwMCIsImMiOjR9">
-</iframe>
-
 ![](https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Secop.gif)
 
 ## Clusters
 
-
 Los resultados del agrupamiento, es necesario hacer una reducción de dimensionalidad. En este caso, la técnica para graficar y tener reducción de dimensionalidad es la TSNE. Se muestran los 3 primeros conglomerados con mayor densidad. El clúster 6 tiene el 65% de todos los datos clasificados en él. Los contratos que se encuentran en este clúster son los relacionados con audiovisuales, temas ambientales y municipios. El clúster 6 es el clúster más denso porque tiene el 65% de todo el conjunto de datos. Este grupo está relacionado con todos los contratos sobre información castral. Este grupo contiene varias cantidades de contratos relacionados con la evaluación de propiedades a nivel municipal y departamental. El grupo 5 que es el siguiente más denso tiene una participación del 9% de todo el conjunto de datos, contiene contratos que están relacionados con el monitoreo y la vigilancia en la superintendencia de proyectos, finalmente el tercer grupo más denso es el 8 con una participación de 6 % de los datos, este clúster está relacionado con todos los contratos relacionados con la salud y el medio ambiente.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Clusters.png" />
 </p>
 
 Los gráficos anteriores muestran que las palabras más comunes son “servicios”, “apoyo” y “prestasi”. Para los bigramas, los pares de palabras más comunes son: “prestaci, servicios” y “servicios, profesionales”. Finalmente, los trigramas más comunes en SECOP I son “servicios, apoyo gesti” y “prestaci, servicios, apoyo”. Esto sugiere que sería necesario realizar algunos métodos especializados de limpieza y manipulación sobre las palabras para poder agruparlas mejor.
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/Flujo.png" />
+  <img src="https://raw.githubusercontent.com/ds4a82/secop-analysis/master/6.%20Viz/logo/WordCloud.png" />
 </p>
 
-
-
-
-
-```
-pip install contexto
-```
-## Documentación
-
-Nulla facilisi. Fusce quis blandit urna. Nullam ullamcorper purus eu justo fermentum euismod. Curabitur at erat non leo mattis luctus. Nam blandit luctus odio ac dapibus. Ut ex risus, egestas faucibus consectetur in, imperdiet sit amet urna. Donec malesuada commodo libero, sed varius risus malesuada at. 
-
-[Nulla eget purus nec urna elementum tincidunt ut ac mauris.](https://ucd-dnp.github.io/ConTexto/)
-
-## Ejemplo
-
-Nam blandit luctus odio ac dapibus. Ut ex risus, egestas faucibus consectetur in, imperdiet sit amet urna. Donec malesuada commodo libero, sed varius risus malesuada at. Nunc faucibus malesuada venenatis. [sección de ejemplos]( https://ucd-dnp.github.io/ConTexto/seccion_ejemplos.html) de la documentación.
-
-## Contribuciones
-
-Integer fermentum dapibus dictum. In ut dignissim massa. Nulla eget purus nec urna elementum tincidunt ut ac mauris. Donec efficitur sed leo id eleifend. Aliquam placerat congue nisi at pretium. Mauris commodo posuere venenatis. Fusce sollicitudin felis id purus malesuada, eget ultrices risus dignissim. Nam et pretium nisi. Nulla facilisi. Ut convallis sapien auctor ex aliquet, quis pharetra tortor dapibus. Sed non sapien ex. Nullam sit amet orci et odio cursus aliquet.
 
 ## Licencia
 
