@@ -16,7 +16,7 @@ De esta forma, es importante analizar la plataforma en la cual las Entidades Est
 
 - A continuación podrá consultar la siguiente información:
    
-  - [¿Por qué importa este problema?](#¿Porquéimportaesteproblema?)
+  - [¿Por qué importa este problema?](#¿Porqué_importa_este_problema?)
   - [Flujograma](#Flujograma)
   - [himenaeos](#instalaci%C3%B3n)
   - [ccumsan](#documentaci%C3%B3n)
