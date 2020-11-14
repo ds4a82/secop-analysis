@@ -4,7 +4,9 @@ ui <- function(){shinyUI(dashboardPage(
     # dropdownMenuCustom(type="messages", customSentence = customSentence)
     # , dropdownMenuOutput("notificationMenu")
     # , dropdownMenuCustom(type="tasks", customSentence = customSentence)
-    title = parameters$title
+     title = parameters$title
+    # title ='Secop Topics'
+    
   )
   , dashboardSidebar(
     sidebarMenu(id = "tabs"
