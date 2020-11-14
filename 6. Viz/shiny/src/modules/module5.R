@@ -2,7 +2,7 @@ module5UI <- function(id){
   ns <- NS(id)
   main <- list(
     ""
-    , h2("Next steps", style = "text-align:center;")
+    , h2("Next Steps", style = "text-align:center;")
     , fluidRow(
       img(src = "https://github.com/ds4a82/secop-analysis/blob/master/6.%20Viz/shiny/img/next-steps.jpg?raw=true", style="display: block;margin-left: auto;margin-right: auto;width: 50%;")
       )
