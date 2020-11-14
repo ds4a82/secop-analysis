@@ -48,13 +48,13 @@ menu <- list(
     )
     , list(
         active = TRUE
-        , name = "Next Steps"
+        , name = "Docs"
         , tab = "module5" # Debe existir un módulo con este nombre
         , icon = "file-pdf"
     )
     , list(
         active = TRUE
-        , name = "Acknowledgment"
+        , name = "About Us"
         , tab = "module6" # Debe existir un módulo con este nombre
         , icon = "users"
     )
