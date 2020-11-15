@@ -1,12 +1,8 @@
 # ---- Shiny User Interface ----
 ui <- function(){shinyUI(dashboardPage(title = 'Secop Topics',
   header = dashboardHeader(
-    # dropdownMenuCustom(type="messages", customSentence = customSentence)
-    # , dropdownMenuOutput("notificationMenu")
-    # , dropdownMenuCustom(type="tasks", customSentence = customSentence)
     title = parameters$title
-    #title ='Secop Topics'
-    
+    , tags$li(class="dropdown",tags$a(href="https://github.com/ds4a82/secop-analysis", icon("github"), "Source Code", target="_blank"))
   )
   , sidebar = dashboardSidebar(
     sidebarMenu(id = "tabs"
@@ -46,7 +42,7 @@ ui <- function(){shinyUI(dashboardPage(title = 'Secop Topics',
       )
     )
     , uiOutput("navtabs")
-    , div(textOutput("keepAlive")) # tiene que verse para que se actualice. Intentar colocarlo de otro color o tamaño
+    , div(span(textOutput("keepAlive"), style = "color:white")) # tiene que verse para que se actualice
   )
   , skin = parameters$dash_color
 ))}
