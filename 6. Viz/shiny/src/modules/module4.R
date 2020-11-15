@@ -9,21 +9,17 @@ module4UI <- function(id){
                  h1("Clusters", style = "text-align:center;")
                  , fluidRow(
                    column(width = 8, HTML(text = clusters))
-                   , column(width = 4, style = "padding-left:60px"
+                   , column(width = 4, style = "float:left"
                      , br(), br(), br()
-                     , HTML("This is a graphical representation of all contracts available in SECOP. The color represents the natural groups (clusters) formed after mathematical computations. <b>Each cluster contain the contracts on which their description is the closest to each other</b>.")
+                     , p(HTML("This is a graphical representation of all contracts available in SECOP. The color represents the natural groups (clusters) formed after mathematical computations. <b>Each cluster contain the contracts on which their description is the closest to each other</b>."), style = "font-size:16px")
                      , br()
+                     , p(HTML("The cluster 6 (colored blue) has 65% of all the data classified in it. The contracts that are in this cluster are the ones related to <b>audiovisuals, environment issues, municipalities and castral information</b>. This cluster contains several amount of contracts related to evaluation of properties at municipal and departmental level."), style = "font-size:16px")
                      , br()
-                     , HTML("The cluster 6 (colored blue) has 65% of all the data classified in it. The contracts that are in this cluster are the ones related to <b>audiovisuals, environment issues, municipalities and castral information</b>. This cluster contains several amount of contracts related to evaluation of properties at municipal and departmental level.")
+                     , p(HTML("The cluster 5 (colored light blue) shares 9% of all contracts. It contains contracts that are related to <b>monitoring and surveillance of the execution of projects.</b>"), style = "font-size:16px")
                      , br()
-                     , br()
-                     , HTML("The cluster 5 (colored light blue) shares 9% of all contracts. It contains contracts that are related to <b>monitoring and surveillance of the execution of projects.</b>")
-                     , br()
-                     , br()
-                     , HTML("Finally the third most dense cluster is the 8th with a share of 6% of the data, this cluster is related to all the contracts in the <b>health and environmental sector</b>.")
+                     , p(HTML("Finally the third most dense cluster is the 8th with a share of 6% of the data, this cluster is related to all the contracts in the <b>health and environmental sector</b>."), style = "font-size:16px")
                      , br() 
-                     , br() 
-                     , HTML("Hover over each point to highlight the contract description's main words")
+                     , p(HTML("Hover over each point to highlight the contract description's main words"), style = "font-size:16px")
                   )
                    
                  )

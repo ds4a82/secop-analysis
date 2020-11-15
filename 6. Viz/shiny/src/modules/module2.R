@@ -113,7 +113,7 @@ module2 <- function(input, output, session){
   
   t <- list(
     family = "source sans pro",
-    size = 13,
+    size = 14,
     color = 'black')
   
   # PieChart:
