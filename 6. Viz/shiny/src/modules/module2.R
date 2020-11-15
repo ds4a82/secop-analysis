@@ -101,7 +101,7 @@ module2 <- function(input, output, session){
   }))
   
   # ValueBox 5
-  output$box5 <- renderBox("Average Contract Provider", "hand-holding-usd", "navy", reactive({
+  output$box5 <- renderBox("Average Contract per Provider", "hand-holding-usd", "navy", reactive({
     # Monthly mean
     comprss(d[logic(), sum(num1_, na.rm = T)/length(unique(cat5_))])
   }))
