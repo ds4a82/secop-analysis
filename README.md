@@ -30,10 +30,10 @@ Grouping contracts by keywords provides a broader and more realistic view of pub
 
 ## Sources of Information
 
-[**SECOP - I**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
+[**SECOP - I Link**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
 The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than **9 million rows. It has 72 columns** in which each column corresponds to information about the hiring process.
 
-[**SECOP - II**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
+[**SECOP - II Link**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
 The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than **527 thousand rows. It has 54 columns** in which each column corresponds to information about the hiring process.
 
 ## Solution
