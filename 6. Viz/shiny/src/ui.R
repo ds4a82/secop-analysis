@@ -31,7 +31,7 @@ ui <- function(){shinyUI(dashboardPage(title = 'Secop Topics',
           $(document).on('shiny:connected', function(event) {
           socket_timeout_interval = setInterval(function(){
           Shiny.onInputChange('count', n++)
-          }, 15000)
+          }, 10000)
           });
           $(document).on('shiny:disconnected', function(event) {
           clearInterval(socket_timeout_interval)
