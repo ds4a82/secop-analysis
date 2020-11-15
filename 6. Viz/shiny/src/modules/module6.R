@@ -21,7 +21,7 @@ module6UI <- function(id){
       , column(wellPanel(style = "background: #222d32",
         img(src = "https://github.com/ds4a82/secop-analysis/raw/master/6.%20Viz/shiny/img/team/camilo_photo.jpg", style="width:150px;height:150px;display:block;margin-left:auto;margin-right:auto;border-radius:75px;border:4px solid #fcfcfc;") 
         , h2("Camilo Cabrera, MSc", style="color:white;text-align:center")
-        , p("Data Science Consultant at fidelio.com.co", style="color:white;text-align:center")
+        , p("Data Science Consultant at fidelio.com.co", style = "color:white;text-align:center")
         , fluidRow(style = "text-align: center;"
           , a(
             icon(name = "envelope", "fa-3x")
@@ -132,6 +132,7 @@ module6UI <- function(id){
       ""
       , column(width = 2)
       , column(width = 8
+     , HTML('<iframe width="100%" height="500" src="Team82_Report.pdf" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
       )
       , column(width = 2)
     )  
