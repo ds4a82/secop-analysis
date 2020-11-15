@@ -30,10 +30,10 @@ Grouping contracts by keywords provides a broader and more realistic view of pub
 
 ## Sources of Information
 
-[**SECOP - I**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
+[**SECOP - I (Link)**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
 The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than **9 million rows. It has 72 columns** in which each column corresponds to information about the hiring process.
 
-[**SECOP - II**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
+[**SECOP - II (Link)**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
 The information is self-documented by the public entities of the country. Each row in the database corresponds to a contract, there are more than **527 thousand rows. It has 54 columns** in which each column corresponds to information about the hiring process.
 
 ## Solution
@@ -128,10 +128,10 @@ La agrupación de contratos por palabras clave proporciona una visión más ampl
 
 ## Fuentes de Información
 
-[**SECOP - I**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
+[**SECOP - I (Link)**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I/xvdy-vvsk) <br />
 La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de **9 millones de filas. Tiene 72 columnas** en las que cada columna corresponde a información sobre el proceso de contratación.
 
-[**SECOP - II**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
+[**SECOP - II (Link)**](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-II-Procesos-de-Contrataci-n/p6dx-8zbt) <br />
 La información es auto documentada por las entidades públicas del país. Cada fila de la base de datos corresponde a un contrato, hay más de **527 mil filas. Tiene 54 columnas** en las que cada columna corresponde a información sobre el proceso de contratación.
 
 ## Solución
