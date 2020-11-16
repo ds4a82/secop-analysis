@@ -1,4 +1,5 @@
 module4UI <- function(id){
+  print("Initiating Module 4 UI...")
   ns <- NS(id)
   lda <- paste(readLines("./www/pyLDAvis.html"), collapse="\n")
   clusters <- paste(readLines("./www/KMeansGraph.html"), collapse="\n")

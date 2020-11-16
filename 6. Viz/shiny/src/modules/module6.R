@@ -1,4 +1,5 @@
 module6UI <- function(id){
+  print("Initiating Module 6 UI...")
   ns <- NS(id)
   main <- list(""
     , br()
