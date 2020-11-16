@@ -1,7 +1,7 @@
 # ---- Shiny Server ----
 library(digest)
 server <- function(input, output, session) {
-  print("Initiating Server...")
+  print(sprintf("Initialiting Server - %s", Sys.time()))  
   # Abrir panel de acciones
   openDashboard <- function(){
     shinyjs::removeClass(selector = "body", class = "sidebar-collapse")
@@ -173,7 +173,7 @@ server <- function(input, output, session) {
     paste("keep alive ", input$count)
   })
   # ---- Stop shiny app when browser tab is closed ---- 
+  # session$onSessionEnded(stopApp) # For debugging pusposes. Restore to allow reconnect
   session$allowReconnect(TRUE) # Permitir reconectar a la session que se tenía previamente
-  session$onSessionEnded(stopApp)
   options(shiny.sanitize.errors = TRUE)
 }

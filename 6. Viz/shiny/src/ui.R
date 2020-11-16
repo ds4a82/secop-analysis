@@ -12,7 +12,19 @@ ui <- function(){shinyUI(dashboardPage(title = 'Secop Topics',
   , body = dashboardBody(
     shinyjs::useShinyjs()
     , fluidPage(
-      tagList(
+      disconnectMessage( # In case de app disconnects
+        text = "Your session has timed out.",
+        refresh = "Refresh",
+        background = "#404040E6",
+        colour = "#FFFFFF",
+        overlayColour = "#999999",
+        overlayOpacity = 0.7,
+        width = "full",
+        top = "center",
+        size = 30,
+        css = "padding: 10px !important; box-shadow: none !important;"
+      )
+      , tagList(
         # The call to singleton ensures it's only included once
         # in a page. It's not strictly necessary in this case, but
         # it's good practice.

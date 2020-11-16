@@ -1,6 +1,6 @@
 
 module2UI <- function(id){
-  print("Initiating Module 2 UI...")
+  print(sprintf("Initialiting Module 2 - %s", Sys.time()))  
   ns <- NS(id)
   # This makes web page load the JS file in the HTML head.
   # The call to singleton ensures it's only included once
