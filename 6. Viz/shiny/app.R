@@ -3,6 +3,7 @@
 #     , "shiny"
 #     , "shinyjs"
 #     , "shinydashboard"
+#     , "shinydisconnect"
 #     , "plotly"
 #     , "digest"
 #     , "DT"
@@ -15,6 +16,7 @@ require(data.table)
 require(shinydashboard)
 require(shiny)
 require(shinyjs)
+require(shinydisconnect)
 
 # Menú
 # El módulo que invoque debe hacer match con su respectivo UI. Ej: modulo (server) y moduloUI (UI)
