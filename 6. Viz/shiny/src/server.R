@@ -1,7 +1,7 @@
 # ---- Shiny Server ----
 library(digest)
 server <- function(input, output, session) {
-  
+  print("Initiating Server...")
   # Abrir panel de acciones
   openDashboard <- function(){
     shinyjs::removeClass(selector = "body", class = "sidebar-collapse")

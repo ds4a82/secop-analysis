@@ -1,5 +1,6 @@
 
 module2UI <- function(id){
+  print("Initiating Module 2 UI...")
   ns <- NS(id)
   # This makes web page load the JS file in the HTML head.
   # The call to singleton ensures it's only included once
@@ -78,6 +79,7 @@ module2UI <- function(id){
 }
 
 module2 <- function(input, output, session){
+  print(sprintf("Initialiting server - %s", Sys.time()))  
   logic <- callModule(crm_filtros, "crm_filtros")
   
   
@@ -117,8 +119,9 @@ module2 <- function(input, output, session){
     color = 'black')
   
   # PieChart:
+  
   output$circle <- renderPlotly({
-    
+    print(sprintf("Calculating pie chart - %s", Sys.time()))  
     label_ = input$perspective
     value_ = input$insight
     logic = logic()
@@ -166,6 +169,7 @@ module2 <- function(input, output, session){
   
   # Bar chart for financial forecast
   output$bar_chart <- renderPlotly({
+    print(sprintf("Calculating bar chart - %s", Sys.time()))
     # timeframe <- "Semanal"
     timeframe <- input$bar
     d$timeframe_ <- d[[timeframe]]
@@ -218,6 +222,7 @@ module2 <- function(input, output, session){
   
   output$table0 <- render_tables(
     data = reactive({
+      print(sprintf("Setting main table - %s", Sys.time()))
       x <- d[logic(), ]
       setnames(x = x, old = "cat1_", new = parameters$cats_[1])
       setnames(x = x, old = "cat2_", new = parameters$cats_[2])
@@ -231,6 +236,7 @@ module2 <- function(input, output, session){
 
   output$table1 <- render_tables(
     data = reactive({
+      print(sprintf("Setting cat1_ table - %s", Sys.time()))
       x <- d[logic(), .(
         'Count' = .N
         , num1_ = sum(`num1_`, na.rm = T)
@@ -244,6 +250,7 @@ module2 <- function(input, output, session){
 
   output$table2 <- render_tables(
     data = reactive({
+      print(sprintf("Setting cat2_ table - %s", Sys.time()))
       x  <- d[logic(), .(
         'Count' = .N
         , num1_ = sum(`num1_`, na.rm = T)
@@ -256,6 +263,7 @@ module2 <- function(input, output, session){
   )
   output$table3 <- render_tables(
     data = reactive({
+      print(sprintf("Setting cat3_ table - %s", Sys.time()))
       x <- d[logic(), .(
         'Count' = .N
         , num1_ = sum(`num1_`, na.rm = T)

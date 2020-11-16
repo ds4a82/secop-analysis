@@ -1,6 +1,6 @@
 crm_filtrosUI <- function(id){
   ns <- NS(id)
-  
+  print(sprintf("Setting filters UI - %s", Sys.time()))  
   # ------ Sales Input ------ 
   cat1_input <- selectCheckboxGroupInput(
     id = ns("cat1_filter")
@@ -53,12 +53,15 @@ crm_filtrosUI <- function(id){
 crm_filtros <- function(input, output, session){
   # ns <- session$ns
   cat1_module <- callModule(selectCheckboxGroup, "cat1_filter", {
+    print(sprintf("Setting cat1_ filters server - %s", Sys.time()))  
     unique(d$cat1_)
   })
   cat2_module <- callModule(selectCheckboxGroup, "cat2_filter", {
+    print(sprintf("Setting cat2_ filters server - %s", Sys.time()))  
     unique(d$cat2_)
   })
   cat3_module <- callModule(selectCheckboxGroup, "cat3_filter", {
+    print(sprintf("Setting cat3_ filters server - %s", Sys.time()))  
     unique(d$cat3_)
   })
   
@@ -72,6 +75,7 @@ crm_filtros <- function(input, output, session){
   # }))
   return(reactive({
     # Retorna un booleano reactivo
+    print(sprintf("Updating logic() in server - %s", Sys.time()))  
     d[,
       date_ >= input$dates[1] &
       date_ <= input$dates[2] &

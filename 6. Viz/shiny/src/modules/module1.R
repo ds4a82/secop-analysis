@@ -1,5 +1,6 @@
 require(plotly)
 module1UI <- function(id){
+  print("Initiating Module 1 UI...")
   ns <- NS(id)
   
   main <- list(""

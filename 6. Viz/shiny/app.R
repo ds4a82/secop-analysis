@@ -21,6 +21,7 @@ require(shinyjs)
 # Input:
 #   - Modulo (Server y UI)
 #   - Lista con las especificaciones del módulo. El tab debe coincidir con el mismo nombre del módulo
+print("Initiating Menus...")
 menu <- list(
     list(
         active = TRUE
@@ -60,6 +61,7 @@ menu <- list(
     )
 )
 
+print("Initiating Parameters...")
 parameters <- list(
     ""
     , data_filename = "data/secop.RDS"
